@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim & Teklif Formu | Alen CNC Mobilya & Kapı Sistemleri</title>
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 40px;
+      margin: 40px 0 80px;
+    }
+    .contact-card-box {
+      background: #ffffff;
+      padding: 36px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-item-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+    .contact-icon-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    .map-frame {
+      width: 100%;
+      height: 280px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      margin-top: 24px;
+      background: #e2e8f0;
+      position: relative;
+      overflow: hidden;
+    }
+    @media (max-width: 900px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <aside class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <a href="tel:+905533842459"><i class="fa fa-phone"></i> +90 553 384 24 59</a>
+        <a href="mailto:info@alencnc.com"><i class="fa fa-envelope-o"></i> info@alencnc.com</a>
+        <a href="https://api.whatsapp.com/send?phone=905533842459" target="_blank" style="color:var(--whatsapp);"><i class="fa fa-whatsapp"></i> WhatsApp: 0553 384 24 59</a>
+      </div>
+      <div class="top-bar-right">
+        <a href="https://www.instagram.com/alen_cnc10/" target="_blank" class="badge-link" style="background:linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color:#fff; border:none; font-weight:700;"><i class="fa fa-instagram"></i> @alen_cnc10</a>
+        <a href="odeme.html" class="badge-link"><i class="fa fa-credit-card"></i> Sanal Ödeme</a>
+        <a href="odeme.html?tab=bayi" class="badge-link"><i class="fa fa-user-circle"></i> Bayi Girişi</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo_alen.png" alt="Alen CNC Logo" class="brand-logo-img">
+        <div class="brand-logo-text">
+          <span class="logo-main">ALEN <span>CNC</span></span>
+          <span class="logo-sub">CNC İŞLEME • TASARIM & ÜRETİM</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html" class="nav-link">Anasayfa</a></li>
+          <li class="nav-item"><a href="kurumsal.html" class="nav-link">Kurumsal</a></li>
+          <li class="nav-item"><a href="urunler.html" class="nav-link">Ürünler</a></li>
+          <li class="nav-item"><a href="index.html#kataloglar" class="nav-link">E-Katalog</a></li>
+          <li class="nav-item"><a href="iletisim.html" class="nav-link active">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn" id="btn-cart-toggle"><i class="fa fa-shopping-bag"></i><span class="cart-badge" style="display:none;">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-banner" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 50px 0; color: #fff; text-align: center;">
+    <div class="container">
+      <h1 style="font-family:'Playfair Display',serif; font-size:2.4rem; margin-bottom:6px;">İletişim & Fiyat Teklifi</h1>
+      <p style="color:#cbd5e1;">Fabrikamıza ulaşın, teklif isteyin veya WhatsApp hattımızdan canlı destek alın.</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="contact-layout">
+      <!-- Sol: İletişim Bilgileri & Harita -->
+      <div>
+        <div class="contact-card-box">
+          <h3 style="font-size:1.3rem; color:var(--primary); margin-bottom:24px; font-family:'Playfair Display',serif;">Genel Merkez & Showroom</h3>
+
+          <div class="contact-item-row">
+            <div class="contact-icon-circle"><i class="fa fa-map-marker"></i></div>
+            <div>
+              <strong style="color:var(--primary); font-size:1rem; display:block; margin-bottom:4px;">Adresimiz</strong>
+              <p style="color:#64748b; font-size:0.9rem; line-height:1.5;">Aşık Veysel Mah. 5837. Sokak No: 3-5, Karabağlar / İzmir / Türkiye</p>
+            </div>
+          </div>
+
+          <div class="contact-item-row">
+            <div class="contact-icon-circle"><i class="fa fa-phone"></i></div>
+            <div>
+              <strong style="color:var(--primary); font-size:1rem; display:block; margin-bottom:4px;">Telefon</strong>
+              <p style="color:#64748b; font-size:0.9rem;">
+                <a href="tel:+905533842459" style="color:inherit; font-weight:700;">+90 553 384 24 59</a> (Atölye & Sipariş)
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item-row">
+            <div class="contact-icon-circle" style="background:#dcfce7; color:#16a34a;"><i class="fa fa-whatsapp"></i></div>
+            <div>
+              <strong style="color:var(--primary); font-size:1rem; display:block; margin-bottom:4px;">Canlı WhatsApp & Teklif Hattı</strong>
+              <p style="color:#64748b; font-size:0.9rem;">
+                <a href="https://api.whatsapp.com/send?phone=905533842459" target="_blank" style="color:#16a34a; font-weight:700;">+90 553 384 24 59</a><br>
+                <span>Hemen mesaj atın, 10 dakika içinde dönüş yapalım.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item-row">
+            <div class="contact-icon-circle" style="background:linear-gradient(45deg, rgba(240,148,51,0.15), rgba(188,24,136,0.15)); color:#e1306c;"><i class="fa fa-instagram"></i></div>
+            <div>
+              <strong style="color:var(--primary); font-size:1rem; display:block; margin-bottom:4px;">Instagram Profilimiz</strong>
+              <p style="color:#64748b; font-size:0.9rem;">
+                <a href="https://www.instagram.com/alen_cnc10/" target="_blank" style="color:#0284c7; font-weight:700;">@alen_cnc10</a><br>
+                <span>CNC İşleme, Tasarım & Üretim, Atölye Günlükleri</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item-row">
+            <div class="contact-icon-circle"><i class="fa fa-envelope-o"></i></div>
+            <div>
+              <strong style="color:var(--primary); font-size:1rem; display:block; margin-bottom:4px;">E-Posta</strong>
+              <p style="color:#64748b; font-size:0.9rem;">
+                <a href="mailto:info@alencnc.com">info@alencnc.com</a><br>
+                <a href="mailto:siparis@alencnc.com">siparis@alencnc.com</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Harita / Görsel Konum -->
+          <div class="map-frame">
+            <iframe 
+              src="https://maps.google.com/maps?q=Karabaglar%20Izmir%20Turkiye&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sağ: Teklif ve Mesaj Formu -->
+      <div>
+        <div class="contact-card-box">
+          <h3 style="font-size:1.4rem; color:var(--primary); margin-bottom:8px; font-family:'Playfair Display',serif;">Bizimle İletişime Geçin</h3>
+          <p style="font-size:0.88rem; color:#64748b; margin-bottom:24px;">Mimari projeleriniz, toptan alım veya fason CNC işleme talepleriniz için formu doldurun.</p>
+
+          <form id="contact-page-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Adınız Soyadınız *</label>
+                <input type="text" id="cp-name" class="form-control" required placeholder="Adınız Soyadınız">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Telefon Numaranız *</label>
+                <input type="tel" id="cp-phone" class="form-control" required placeholder="05XX XXX XX XX">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">E-Posta Adresiniz *</label>
+                <input type="email" id="cp-email" class="form-control" required placeholder="adiniz@eposta.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Talep Türü</label>
+                <select id="cp-type" class="form-control">
+                  <option value="Proje Fiyat Teklifi">Proje Fiyat Teklifi Almak İstiyorum</option>
+                  <option value="CNC İşleme Talebi">CNC Frezeleme / Fason Kesim</option>
+                  <option value="Bayilik Talebi">Bayilik / Toptan Alım</option>
+                  <option value="Sipariş Durumu Sorgulama">Sipariş Durumu Sorgulama</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Konu / Ürün Kodu</label>
+              <input type="text" id="cp-subject" class="form-control" placeholder="Örn: ALEN-5004 Kapı ve CNC Akrilik Kapak Fiyatı">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Mesajınız & Detaylar *</label>
+              <textarea id="cp-message" class="form-control" rows="4" required placeholder="Lütfen projeniz, adetleriniz veya sormak istediğiniz konuları belirtiniz..."></textarea>
+            </div>
+
+            <div style="margin-bottom:20px;">
+              <label style="font-size:0.82rem; color:var(--text-muted); display:flex; align-items:center; gap:8px; cursor:pointer;">
+                <input type="checkbox" required checked>
+                <span>Kişisel verilerimin iletişim faaliyeti kapsamında işlenmesini kabul ediyorum.</span>
+              </label>
+            </div>
+
+            <div style="display:flex; gap:14px; flex-wrap:wrap;">
+              <button type="submit" class="btn btn-accent" style="flex-grow:1; padding:14px;">
+                <i class="fa fa-paper-plane"></i> Mesajı Gönder
+              </button>
+              <a href="https://api.whatsapp.com/send?phone=905533842459" target="_blank" class="btn" style="background:#25d366; color:#fff;">
+                <i class="fa fa-whatsapp"></i> WhatsApp'tan Yazın
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 <strong>Alen CNC Mobilya & Kapı Sistemleri</strong>. Tüm Hakları Saklıdır.</div>
+        <div style="display:flex; gap:16px;">
+          <a href="https://www.instagram.com/alen_cnc10/" target="_blank"><i class="fa fa-instagram"></i> @alen_cnc10</a>
+          <a href="index.html">Anasayfaya Dön</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/cart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // URL'den gelen teklif parametresini doldurma
+      const urlParams = new URLSearchParams(window.location.search);
+      const teklifParam = urlParams.get('teklif');
+      if (teklifParam) {
+        const subjectInput = document.getElementById('cp-subject');
+        if (subjectInput) {
+          subjectInput.value = `${teklifParam} - Özel Fiyat Teklifi`;
+        }
+      }
+
+      // Form submit
+      const form = document.getElementById('contact-page-form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('cp-name').value;
+          alert(`Teşekkür ederiz Sayın ${name}. Mesajınız başarıyla iletildi. Müşteri temsilcimiz en kısa sürede sizinle iletişime geçecektir.`);
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

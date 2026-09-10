@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alen CNC | Hassas CNC İşleme, Kapı, Membran Kapak & Mobilya Sistemleri</title>
+  <meta name="description" content="Alen CNC: İleri teknoloji CNC router işleme, PVC membran kapı ve kapak, banyo modülleri ve özel mimari mobilya imalatında güvenilir çözüm ortağınız.">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  
+  <!-- Font Awesome İkonları -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- CSS Dosyaları -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       ÜST BİLGİ BARI (TOP BAR)
+       ========================================================================== -->
+  <aside class="top-bar" aria-label="Hızlı İletişim ve İşlemler">
+    <div class="container">
+      <div class="top-bar-left">
+        <a href="tel:+905533842459"><i class="fa fa-phone"></i> +90 553 384 24 59</a>
+        <a href="mailto:info@alencnc.com"><i class="fa fa-envelope-o"></i> info@alencnc.com</a>
+        <a href="https://api.whatsapp.com/send?phone=905533842459" target="_blank" style="color:var(--whatsapp);"><i class="fa fa-whatsapp"></i> WhatsApp: 0553 384 24 59</a>
+      </div>
+      <div class="top-bar-right">
+        <a href="https://www.instagram.com/alen_cnc10/" target="_blank" class="badge-link" style="background:linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color:#fff; border:none; font-weight:700;"><i class="fa fa-instagram"></i> @alen_cnc10</a>
+        <a href="odeme.html" class="badge-link"><i class="fa fa-credit-card"></i> Sanal Ödeme</a>
+        <a href="odeme.html?tab=bayi" class="badge-link"><i class="fa fa-user-circle"></i> Bayi Girişi</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       ANA HEADER & NAVİGASYON
+       ========================================================================== -->
+  <header class="main-header">
+    <div class="container">
+      <!-- Logo - Enhanced Prominence -->
+      <a href="index.html" class="brand-logo" title="Alen CNC Ana Sayfa">
+        <img src="assets/logo_alen.png" alt="Alen CNC Logo" class="brand-logo-img">
+        <div class="brand-logo-text">
+          <span class="logo-main">ALEN <span>CNC</span></span>
+          <span class="logo-sub">CNC İŞLEME • TASARIM & ÜRETİM</span>
+        </div>
+      </a>
+
+      <!-- Masaüstü Navigasyon -->
+      <nav class="main-nav" aria-label="Ana Menü">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html" class="nav-link active">Anasayfa</a></li>
+          <li class="nav-item"><a href="kurumsal.html" class="nav-link">Kurumsal</a></li>
+          <li class="nav-item">
+            <a href="urunler.html" class="nav-link">Ürünler <i class="fa fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="urunler.html?cat=kapi" class="dropdown-item">Kapı Serileri <span class="item-badge">PVC & Lake</span></a>
+              <a href="urunler.html?cat=kapak" class="dropdown-item">Mobilya Kapakları <span class="item-badge">Soft & Akrilik</span></a>
+              <a href="urunler.html?cat=banyo" class="dropdown-item">Banyo Modülleri <span class="item-badge">Premium</span></a>
+              <a href="urunler.html?cat=modul" class="dropdown-item">Mutfak & Dolap Gövdeleri <span class="item-badge">Modüler</span></a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="urunler.html" class="nav-link">Online Mağaza</a></li>
+          <li class="nav-item"><a href="#kataloglar" class="nav-link">E-Katalog</a></li>
+          <li class="nav-item"><a href="iletisim.html" class="nav-link">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <!-- Sağ Aksiyonlar (Arama, Sepet, Teklif Butonu, Mobil Menü Tetikleyici) -->
+      <div class="header-actions">
+        <button class="action-btn" id="btn-search-toggle" title="Ürün Ara">
+          <i class="fa fa-search"></i>
+        </button>
+
+        <button class="action-btn" id="btn-cart-toggle" title="Alışveriş Sepeti">
+          <i class="fa fa-shopping-bag"></i>
+          <span class="cart-badge" style="display:none;">0</span>
+        </button>
+
+        <a href="#teklif-al" class="btn-header-quote">
+          <i class="fa fa-file-text-o"></i> Teklif Al
+        </a>
+
+        <button class="action-btn mobile-menu-toggle" id="mobile-menu-btn" title="Menü">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SLİDER (VİTRİN KAYDIRICI)
+       ========================================================================== -->
+  <section class="hero-slider-container" id="hero-slider" aria-label="Öne Çıkan Koleksiyonlar">
+    <!-- Slide 1: VUNA Cafe Showstopper -->
+    <div class="hero-slide active">
+      <div class="hero-slide-bg" style="background-image: url('assets/projects/vuna_cafe_panoramic.jpg');"></div>
+      <div class="container" style="height:100%; display:flex; align-items:center;">
+        <div class="hero-content">
+          <span class="hero-badge"><i class="fa fa-star"></i> Son Projemiz • VUNA Cafe</span>
+          <h1 class="hero-title">Mekanlara Ruh Katan <span>3D Parametrik Duvar Sanatı</span></h1>
+          <p class="hero-desc">VUNA Cafe için özel olarak tasarlayıp 5 eksenli CNC merkezimizde ürettiğimiz parametrik ahşap dalga ve heykelsi yüz rölyefi duvar dekorasyonu. Mekanınızı sanat eserine dönüştürün.</p>
+          <div class="hero-buttons">
+            <a href="#urunler" class="btn btn-primary"><i class="fa fa-eye"></i> Projeleri İncele</a>
+            <a href="https://api.whatsapp.com/send?phone=905533842459&text=Merhaba%2C%20VUNA%20Cafe%20benzeri%203D%20duvar%20s%C3%BCslemesi%20ve%20CNC%20projesi%20i%C3%A7in%20fiyat%20almak%20istiyorum." target="_blank" class="btn-whatsapp-hero"><i class="fa fa-whatsapp"></i> WhatsApp: 0553 384 24 59</a>
+          </div>
+          <div class="hero-features-strip">
+            <span><i class="fa fa-check-circle"></i> 5 Eksenli CNC İşleme</span>
+            <span><i class="fa fa-check-circle"></i> Masif & Akustik Ahşap</span>
+            <span><i class="fa fa-check-circle"></i> Özel Mimari Ölçülendirme</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: Klinik & Otel Resepsiyon Projeleri -->
+    <div class="hero-slide">
+      <div class="hero-slide-bg" style="background-image: url('assets/projects/clinic_reception_panoramic.jpg');"></div>
+      <div class="container" style="height:100%; display:flex; align-items:center;">
+        <div class="hero-content">
+          <span class="hero-badge"><i class="fa fa-building"></i> Mimari & Ticari Mekanlar</span>
+          <h2 class="hero-title">Klinik, Otel ve Cafeler İçin <span>Özel CNC Tasarımlar</span></h2>
+          <p class="hero-desc">Estetik klinik resepsiyonlarından diş kliniklerine, fitness merkezlerinden butik kafelere kadar her konsepte özel 3D ahşap heykelsi akustik duvar çözümleri.</p>
+          <div class="hero-buttons">
+            <a href="urunler.html?cat=duvar" class="btn btn-primary"><i class="fa fa-th-large"></i> Duvar Panellerini İncele</a>
+            <a href="https://api.whatsapp.com/send?phone=905533842459&text=Merhaba%2C%20klinik%20ve%20otel%20CNC%20projesi%20i%C3%A7in%20bilgi%20almak%20istiyorum." target="_blank" class="btn-whatsapp-hero"><i class="fa fa-whatsapp"></i> Hızlı Teklif Al</a>
+          </div>
+          <div class="hero-features-strip">
+            <span><i class="fa fa-check-circle"></i> Gizli LED Aydınlatma</span>
+            <span><i class="fa fa-check-circle"></i> Akustik Çıta Dizilimi</span>
+            <span><i class="fa fa-check-circle"></i> Anahtar Teslim Montaj</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: Diş Kliniği ve Özel CNC İşleme -->
+    <div class="hero-slide">
+      <div class="hero-slide-bg" style="background-image: url('assets/projects/dental_clinic_panoramic.jpg');"></div>
+      <div class="container" style="height:100%; display:flex; align-items:center;">
+        <div class="hero-content">
+          <span class="hero-badge"><i class="fa fa-cogs"></i> CNC İşleme | Tasarım & Üretim</span>
+          <h2 class="hero-title">CNC ile Hayallerinizi <span>Şekillendiriyoruz</span></h2>
+          <p class="hero-desc">Tematik diş klinikleri, spor salonları, özel frezeli iç mekan kapıları ve mimari projeleriniz için doğrudan atölyemizden sıfır hata garantisiyle üretim.</p>
+          <div class="hero-buttons">
+            <a href="urunler.html" class="btn btn-primary"><i class="fa fa-th"></i> Tüm Koleksiyonlar</a>
+            <a href="https://api.whatsapp.com/send?phone=905533842459" target="_blank" class="btn-whatsapp-hero"><i class="fa fa-whatsapp"></i> WhatsApp'tan Danış</a>
+          </div>
+          <div class="hero-features-strip">
+            <span><i class="fa fa-check-circle"></i> Tematik Ahşap Heykel</span>
+            <span><i class="fa fa-check-circle"></i> 0.05 mm Mikron Hassasiyet</span>
+            <span><i class="fa fa-check-circle"></i> Doğrudan Üreticiden</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kontroller -->
+    <button class="slider-arrow prev" id="slider-prev" aria-label="Önceki Slayt"><i class="fa fa-angle-left"></i></button>
+    <button class="slider-arrow next" id="slider-next" aria-label="Sonraki Slayt"><i class="fa fa-angle-right"></i></button>
+    <div class="slider-dots" id="slider-dots"></div>
+  </section>
+
+  <!-- ==========================================================================
+       ANA KATEGORİLER (GÖKTAŞ MOBİLYA TARZI KARTLAR)
+       ========================================================================== -->
+  <section class="category-section" aria-label="Ürün Kategorileri">
+    <div class="container">
+      <div class="category-grid">
+        <!-- 3D PARAMETRİK DUVAR -->
+        <a href="urunler.html?cat=duvar" class="category-card">
+          <div class="category-card-img" style="background-image: url('assets/projects/vuna_cafe_wall.jpg'); background-position: center;"></div>
+          <div class="category-card-content">
+            <span class="category-card-tag">Son Projemiz • Cafe & Restoran</span>
+            <h3 class="category-card-title">3D DUVAR SANATI</h3>
+            <span class="category-card-link">Parametrik Çıtaları İncele <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- KLİNİK & TİCARİ CNC -->
+        <a href="urunler.html?cat=duvar" class="category-card">
+          <div class="category-card-img" style="background-image: url('assets/projects/dental_clinic_tooth.jpg'); background-position: center;"></div>
+          <div class="category-card-content">
+            <span class="category-card-tag">Klinik & Ofis Konseptleri</span>
+            <h3 class="category-card-title">TİCARİ MEKANLAR</h3>
+            <span class="category-card-link">Projeleri İncele <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- KAPI -->
+        <a href="urunler.html?cat=kapi" class="category-card">
+          <div class="category-card-img" style="background-image: url('assets/projects/hallway_parametric_art.jpg'); background-position: center;"></div>
+          <div class="category-card-content">
+            <span class="category-card-tag">Üretim & Akustik</span>
+            <h3 class="category-card-title">KAPI SİSTEMLERİ</h3>
+            <span class="category-card-link">Modelleri İncele <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- KAPAK & MOBİLYA -->
+        <a href="urunler.html?cat=kapak" class="category-card">
+          <div class="category-card-img" style="background-image: url('assets/projects/cafe_bar_parametric.jpg'); background-position: center;"></div>
+          <div class="category-card-content">
+            <span class="category-card-tag">Mutfak & Bar Tasarımı</span>
+            <h3 class="category-card-title">MOBİLYA KAPAKLARI</h3>
+            <span class="category-card-link">Serileri İncele <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ÜRÜN VİTRİNİ VE FİLTRELEME
+       ========================================================================== -->
+  <section class="product-section" id="urunler" aria-label="Ürün Vitrini">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Alen CNC Üretim & Tasarım Gücü</span>
+        <h2 class="section-title">Gerçek Proje & Ürün Koleksiyonlarımız</h2>
+        <p class="section-desc">VUNA Cafe ve estetik kliniklerine yaptığımız 3D parametrik heykelsi duvar süslemelerinden, iç mekan kapı ve membran mobilya kapak serilerimize kadar atölyemizden çıkan işler.</p>
+      </div>
+
+      <!-- Kategori Filtre Butonları -->
+      <div class="product-filter-bar">
+        <button class="filter-btn active" data-filter="all"><i class="fa fa-th"></i> Tümü</button>
+        <button class="filter-btn" data-filter="duvar"><i class="fa fa-cubes"></i> 3D Parametrik Duvar Sanatı</button>
+        <button class="filter-btn" data-filter="kapi"><i class="fa fa-columns"></i> Kapı Modelleri</button>
+        <button class="filter-btn" data-filter="kapak"><i class="fa fa-square"></i> Kapak Serileri</button>
+        <button class="filter-btn" data-filter="banyo"><i class="fa fa-bath"></i> Banyo & Modüller</button>
+      </div>
+
+      <!-- Dinamik Ürün Izgarası -->
+      <div class="product-grid" id="product-grid">
+        <!-- products.js tarafından otomatik doldurulacaktır -->
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="urunler.html" class="btn btn-outline" style="padding:14px 36px; font-size:0.95rem;">
+          TÜM ÜRÜNLERİ VE FİYATLARI LİSTELE <i class="fa fa-angle-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       E-KATALOG BÖLÜMÜ (İNCELE & İNDİR)
+       ========================================================================== -->
+  <section class="catalog-section" id="kataloglar" aria-label="E-Kataloglar">
+    <div class="container">
+      <div class="section-header" style="color:#ffffff;">
+        <span class="section-subtitle" style="color:var(--accent);">Dijital Yayınlarımız</span>
+        <h2 class="section-title" style="color:#ffffff;">2025 Ürün Kataloglarımızı İnceleyin</h2>
+        <p class="section-desc" style="color:#cbd5e1;">Yeni sezon renk kartelaları, teknik detaylar ve mimari çizimleri içeren kataloglarımızı hemen görüntüleyin veya cihazınıza indirin.</p>
+      </div>
+
+      <div class="catalog-grid">
+        <!-- Kapak Kataloğu -->
+        <div class="catalog-card">
+          <div class="catalog-cover">
+            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=300&q=80" alt="2025 Kapak Kataloğu">
+          </div>
+          <div class="catalog-info">
+            <h3>2025 Mobilya Kapak Kataloğu</h3>
+            <p>Soft, Akrilik, Lake, Embos ve Kendinden Kulplu J serisi kapak modellerimizin yer aldığı kapsamlı teknik katalog.</p>
+            <div class="catalog-actions">
+              <a href="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80" target="_blank" class="btn btn-sm btn-accent"><i class="fa fa-eye"></i> Online İncele</a>
+              <a href="#" onclick="alert('Kapak Kataloğu PDF indirme başlatılıyor (18.4 MB)...'); return false;" class="btn btn-sm btn-outline-white"><i class="fa fa-download"></i> PDF İndir</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kapı Kataloğu -->
+        <div class="catalog-card">
+          <div class="catalog-cover">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=300&q=80" alt="2025 Kapı Kataloğu">
+          </div>
+          <div class="catalog-info">
+            <h3>2025 İç Mekan Kapı Kataloğu</h3>
+            <p>PVC Membran, Lake, Melamin ve Ahşap kapı serileri. Kasa-pervaz detayları ve akustik fitil standartları.</p>
+            <div class="catalog-actions">
+              <a href="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80" target="_blank" class="btn btn-sm btn-accent"><i class="fa fa-eye"></i> Online İncele</a>
+              <a href="#" onclick="alert('Kapı Kataloğu PDF indirme başlatılıyor (22.1 MB)...'); return false;" class="btn btn-sm btn-outline-white"><i class="fa fa-download"></i> PDF İndir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ==========================================================================
+       MARKA VİTRİNİ & LOGO SPOTLIGHT (3D KURUMSAL TANITIM)
+       ========================================================================== -->
+  <section class="brand-spotlight-section" aria-label="Alen CNC Kurumsal Tanıtım">
+    <div class="container">
+      <div class="spotlight-grid">
+        <div class="spotlight-media">
+          <img src="assets/logo_wall.jpg" alt="Alen CNC Endüstriyel Üretim ve Ofis Logosu">
+        </div>
+        <div class="spotlight-content">
+          <span class="spotlight-badge"><i class="fa fa-cogs"></i> CNC İşleme | Tasarım & Üretim</span>
+          <h2 class="spotlight-title">CNC ile Hayallerinizi <span>Şekillendiriyoruz.</span></h2>
+          <p style="color:#94a3b8; font-size:1.05rem; line-height:1.7; margin-bottom:24px;">
+            Alen CNC olarak; en son teknoloji 5 eksenli CNC işleme merkezleri, vakum membran pres teknolojisi ve atölye tecrübemizle iç mekan kapılarından mimari mobilya kapaklarına kadar projelerinize mikron hassasiyetinde değer katıyoruz.
+          </p>
+
+          <div class="spotlight-bio-list">
+            <div class="spotlight-bio-item">
+              <i class="fa fa-check-circle"></i>
+              <span><strong>CNC İşleme | Tasarım & Üretim:</strong> Özel motifler, pantograf detaylar ve mikron toleranslı ebatlama.</span>
+            </div>
+            <div class="spotlight-bio-item">
+              <i class="fa fa-wrench"></i>
+              <span><strong>Endüstriyel Üretim & Atölye Günlükleri:</strong> Canlı üretim aşamaları, kalite kontroller ve şeffaf süreç.</span>
+            </div>
+            <div class="spotlight-bio-item">
+              <i class="fa fa-phone-square"></i>
+              <span><strong>Doğrudan İletişim & WhatsApp:</strong> <a href="tel:+905533842459" style="color:#38bdf8; font-weight:700;">+90 553 384 24 59</a></span>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:16px; flex-wrap:wrap;">
+            <a href="https://www.instagram.com/alen_cnc10/" target="_blank" class="btn instagram-btn-gradient">
+              <i class="fa fa-instagram"></i> Instagram'da Takip Edin (@alen_cnc10)
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=905533842459&text=Merhaba%2C%20CNC%20ve%20mobilya%20projemiz%20i%C3%A7in%20teklif%20almak%20istiyoruz." target="_blank" class="btn btn-outline-white" style="border-color:#25d366; color:#25d366;">
+              <i class="fa fa-whatsapp"></i> WhatsApp'tan Yazın
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ATÖLYE GÜNLÜKLERİ & INSTAGRAM AKIŞI (@alen_cnc10)
+       ========================================================================== -->
+  <section class="instagram-showcase-section" aria-label="Instagram Atölye Günlükleri">
+    <div class="container">
+      <div class="section-header" style="text-align:center;">
+        <span class="section-subtitle" style="color:#0284c7;"><i class="fa fa-instagram"></i> @alen_cnc10</span>
+        <h2 class="section-title">Endüstriyel Üretim & Atölye Günlükleri</h2>
+        <p class="section-desc">Atölyemizden canlı üretim anları, CNC kesim videoları ve montajını tamamladığımız mimari kapı ve kapak projelerimiz.</p>
+      </div>
+
+      <div class="instagram-grid">
+        <!-- Post 1: VUNA Cafe -->
+        <a href="https://www.instagram.com/alen_cnc10/" target="_blank" class="instagram-card">
+          <div class="instagram-hover-icon"><i class="fa fa-instagram"></i></div>
+          <img src="assets/projects/vuna_cafe_wall.jpg" alt="VUNA Cafe 3D Parametrik Ahşap Duvar Sanatı" class="instagram-card-img" style="object-position:center 30%;">
+          <div class="instagram-card-body">
+            <span class="instagram-tag">#VunaCafe #ParametrikDuvar #AhşapSanatı</span>
+            <p class="instagram-caption"><strong>VUNA Cafe Duvar Süslemesi:</strong> 5 Eksenli CNC merkezimizde heykelsi kadın yüzü formunda hazırlanan parametrik ahşap dalga paneli.</p>
+          </div>
+        </a>
+
+        <!-- Post 2: Resepsiyon Yüz Rölyefi -->
+        <a href="https://www.instagram.com/alen_cnc10/" target="_blank" class="instagram-card">
+          <div class="instagram-hover-icon"><i class="fa fa-instagram"></i></div>
+          <img src="assets/projects/reception_face_relief.jpg" alt="Klinik Resepsiyonu 3D Yüz Rölyefi" class="instagram-card-img" style="object-position:center top;">
+          <div class="instagram-card-body">
+            <span class="instagram-tag">#KlinikTasarım #Resepsiyon #3DRölyef</span>
+            <p class="instagram-caption"><strong>Danışma Bankosu Arkası:</strong> Estetik klinik ve otel lobileri için dev boyutlu, gizli LED ışık geçişli 3D ahşap rölyef duvar.</p>
+          </div>
+        </a>
+
+        <!-- Post 3: Diş Kliniği Heykeli -->
+        <a href="https://www.instagram.com/alen_cnc10/" target="_blank" class="instagram-card">
+          <div class="instagram-hover-icon"><i class="fa fa-instagram"></i></div>
+          <img src="assets/projects/dental_clinic_tooth.jpg" alt="Diş Kliniği 3D Parametrik Diş Duvar Heykeli" class="instagram-card-img" style="object-position:center 35%;">
+          <div class="instagram-card-body">
+            <span class="instagram-tag">#DişKliniği #TematikTasarım #AlenCNC</span>
+            <p class="instagram-caption"><strong>Diş Kliniği Konsepti:</strong> Bekleme salonuna özel, masif ahşap çıtalardan parametrik diş heykeli duvar tasarımı.</p>
+          </div>
+        </a>
+
+        <!-- Post 4: Gym Koşan Atlet -->
+        <a href="https://www.instagram.com/alen_cnc10/" target="_blank" class="instagram-card">
+          <div class="instagram-hover-icon"><i class="fa fa-instagram"></i></div>
+          <img src="assets/projects/gym_running_man.jpg" alt="Gym & Fitness Koşan Atlet Duvarı" class="instagram-card-img" style="object-position:center 30%;">
+          <div class="instagram-card-body">
+            <span class="instagram-tag">#GymDesign #FitnessDekor #KoşanAdam</span>
+            <p class="instagram-caption"><strong>Spor Salonu Akustik Duvarı:</strong> Koşan atlet anatomisini ahşap parametrik dalgalarla mekanın odak noktası yapan çalışma.</p>
+          </div>
+        </a>
+
+        <!-- Post 5: Cafe Bar Arkası -->
+        <a href="https://www.instagram.com/alen_cnc10/" target="_blank" class="instagram-card">
+          <div class="instagram-hover-icon"><i class="fa fa-instagram"></i></div>
+          <img src="assets/projects/cafe_bar_parametric.jpg" alt="Cafe & Bar Arkası 3D Ahşap Panel" class="instagram-card-img" style="object-position:center 20%;">
+          <div class="instagram-card-body">
+            <span class="instagram-tag">#CafeTasarım #BarArkası #IşıklıPanel</span>
+            <p class="instagram-caption"><strong>Cafe & Bar Arkası Heykel:</strong> Sıcak gizli LED aydınlatması ve dalgalı ahşap çıtalarıyla lüks mekan atmosferi.</p>
+          </div>
+        </a>
+
+        <!-- Post 6: CNC Atölye Kesimi -->
+        <a href="https://www.instagram.com/alen_cnc10/" target="_blank" class="instagram-card">
+          <div class="instagram-hover-icon"><i class="fa fa-instagram"></i></div>
+          <img src="assets/projects/cnc_workshop_milling.jpg" alt="5 Eksenli CNC Panel Frezeleme" class="instagram-card-img" style="object-position:center center;">
+          <div class="instagram-card-body">
+            <span class="instagram-tag">#AtölyeGünlükleri #CNCKesim #İmalat</span>
+            <p class="instagram-caption"><strong>Atölyemizden Canlı:</strong> 5 eksenli CNC freze merkezimizde ahşap panelin katman katman heykelleşme süreci.</p>
+          </div>
+        </a>
+      </div>
+
+      <div style="text-align:center; margin-top:36px;">
+        <a href="https://www.instagram.com/alen_cnc10/" target="_blank" class="btn instagram-btn-gradient" style="padding:14px 32px; font-size:0.95rem;">
+          <i class="fa fa-instagram"></i> @alen_cnc10 Hesabımızı Takip Edin
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       HIZLI TEKLİF AL & PROJE İLETİŞİM FORMU
+       ========================================================================== -->
+  <section class="quote-section" id="teklif-al" aria-label="Teklif Formu">
+    <div class="container">
+      <div class="quote-wrapper">
+        <!-- Sol Bilgi Alanı -->
+        <div class="quote-info-side">
+          <div>
+            <span style="color:var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:2px; font-size:0.8rem;">Doğrudan Fabrikadan</span>
+            <h3>Size Nasıl Yardımcı Olabiliriz?</h3>
+            <p>Konut, otel veya ofis projeleriniz için özel ölçülerde üretim imkanı. Adet, metraj ve model bilgilerinizi iletin, mimari ekibimiz 2 saat içinde fiyat teklifinizi hazırlasın.</p>
+
+            <div class="quote-feature">
+              <i class="fa fa-shield"></i>
+              <div>
+                <h4>5 Yıl Garanti</h4>
+                <span>Tüm kapı ve kapak ürünlerimizde sararma ve kabarmaya karşı güvence.</span>
+              </div>
+            </div>
+
+            <div class="quote-feature">
+              <i class="fa fa-truck"></i>
+              <div>
+                <h4>Hızlı ve Güvenli Sevkiyat</h4>
+                <span>Türkiye geneline ambalajlı ve sigortalı sevkiyat imkanı.</span>
+              </div>
+            </div>
+
+            <div class="quote-feature">
+              <i class="fa fa-whatsapp"></i>
+              <div>
+                <h4>Anlık WhatsApp Hattı</h4>
+                <span>Projelerinizi çizim veya liste halinde doğrudan WhatsApp'tan gönderin.</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:20px; font-size:0.85rem; color:#94a3b8;">
+            <i class="fa fa-clock-o"></i> Hafta içi 08:30 - 18:30 saatleri arasında kesintisiz danışma hattı.
+          </div>
+        </div>
+
+        <!-- Sağ Form Alanı -->
+        <div class="quote-form-side">
+          <h3 style="font-size:1.6rem; color:var(--primary); margin-bottom:8px; font-family:'Playfair Display',serif;">Hemen Fiyat Teklifi İsteyin</h3>
+          <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:24px;">Formu doldurarak projenize özel toptan veya perakende fiyat teklifinizi anında talep edebilirsiniz.</p>
+
+          <form id="quote-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="quote-name">Adınız Soyadınız *</label>
+                <input type="text" id="quote-name" class="form-control" placeholder="Örn: Ahmet Yılmaz" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="quote-phone">Telefon Numaranız *</label>
+                <input type="tel" id="quote-phone" class="form-control" placeholder="05XX XXX XX XX" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="quote-email">E-Posta Adresiniz</label>
+                <input type="email" id="quote-email" class="form-control" placeholder="ahmet@ornek.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="quote-category">İlgilendiğiniz Ürün Grubu *</label>
+                <select id="quote-category" class="form-control" required>
+                  <option value="Kapı Serileri">Kapı Serileri (PVC, Lake, Melamin)</option>
+                  <option value="Mobilya Kapakları">Mobilya Kapakları (Soft, Akrilik)</option>
+                  <option value="Banyo Takımları">Banyo Modülleri</option>
+                  <option value="Mutfak Dolap Modülleri">Mutfak & Dolap Gövdeleri</option>
+                  <option value="Komple Proje & Toplu İmalat">Komple Proje & Toplu İmalat</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="quote-subject">Teklif Konusu / Ürün Kodu</label>
+              <input type="text" id="quote-subject" class="form-control" placeholder="Örn: GK-5004 Kapı ve 309 Kaşmir Kapak Fiyatı">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="quote-note">Proje Notunuz / Ölçü & Adet Bilgisi *</label>
+              <textarea id="quote-note" class="form-control" rows="3" placeholder="Örn: 12 adet iç kapı ve yaklaşık 25 m² mutfak kapağı için fiyat teklifi rica ediyorum..." required></textarea>
+            </div>
+
+            <div style="margin-bottom:20px;">
+              <label style="font-size:0.8rem; color:var(--text-muted); display:flex; align-items:center; gap:8px; cursor:pointer;">
+                <input type="checkbox" required checked>
+                <span>KVKK kapsamında kişisel verilerimin teklif sürecinde işlenmesine onay veriyorum.</span>
+              </label>
+            </div>
+
+            <div style="display:flex; gap:14px; flex-wrap:wrap;">
+              <button type="submit" class="btn btn-accent" style="flex-grow:1; padding:14px;">
+                <i class="fa fa-paper-plane"></i> Teklif Talebini Gönder
+              </button>
+              <button type="button" onclick="window.open('https://api.whatsapp.com/send?phone=905533842459&text=' + encodeURIComponent('Merhaba, web sitenizden kurumsal teklif almak istiyorum.'), '_blank')" class="btn" style="background:#25d366; color:#fff;">
+                <i class="fa fa-whatsapp"></i> WhatsApp ile Sor
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER (ALT BİLGİ)
+       ========================================================================== -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Kolon 1: Marka & Açıklama -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="assets/logo_alen.png" alt="Alen CNC Logo" class="brand-logo-img">
+            <div class="brand-logo-text">
+              <span class="logo-main" style="color:#ffffff;">ALEN <span>CNC</span></span>
+              <span class="logo-sub" style="color:#94a3b8;">CNC İŞLEME • TASARIM & ÜRETİM</span>
+            </div>
+          </a>
+          <p>Alen CNC: CNC İşleme, Tasarım & Üretim ve Endüstriyel Üretim Atölyesi. "CNC ile hayallerinizi şekillendiriyoruz." İç mekan kapılarından membran ve akrilik kapaklara kadar yüksek teknolojili hassas imalat.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/alen_cnc10/" target="_blank" class="footer-social-link" title="Instagram @alen_cnc10" style="background:linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);"><i class="fa fa-instagram"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=905533842459" target="_blank" class="footer-social-link" title="WhatsApp" style="background:#25d366;"><i class="fa fa-whatsapp"></i></a>
+            <a href="tel:+905533842459" class="footer-social-link" title="Telefon"><i class="fa fa-phone"></i></a>
+          </div>
+        </div>
+
+        <!-- Kolon 2: Hızlı Bağlantılar -->
+        <div class="footer-col">
+          <h4>Kurumsal & Sosyal</h4>
+          <ul class="footer-links">
+            <li><a href="kurumsal.html"><i class="fa fa-angle-right"></i> Hakkımızda</a></li>
+            <li><a href="https://www.instagram.com/alen_cnc10/" target="_blank" style="color:#38bdf8; font-weight:700;"><i class="fa fa-instagram"></i> @alen_cnc10 Instagram</a></li>
+            <li><a href="kurumsal.html#uretim"><i class="fa fa-angle-right"></i> CNC Parkurumuz</a></li>
+            <li><a href="#kataloglar"><i class="fa fa-angle-right"></i> E-Kataloglar</a></li>
+            <li><a href="odeme.html?tab=bayi"><i class="fa fa-angle-right"></i> Bayi Girişi</a></li>
+            <li><a href="odeme.html"><i class="fa fa-angle-right"></i> Sanal Ödeme</a></li>
+            <li><a href="iletisim.html"><i class="fa fa-angle-right"></i> İletişim & Ulaşım</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolon 3: Ürün Kategorileri -->
+        <div class="footer-col">
+          <h4>Ürün & İşleme Grupları</h4>
+          <ul class="footer-links">
+            <li><a href="urunler.html?cat=kapi"><i class="fa fa-angle-right"></i> CNC Desenli PVC Kapılar</a></li>
+            <li><a href="urunler.html?cat=kapak"><i class="fa fa-angle-right"></i> J-Kulp & Membran Kapaklar</a></li>
+            <li><a href="urunler.html?cat=kapak"><i class="fa fa-angle-right"></i> Akrilik & Süpermat</a></li>
+            <li><a href="urunler.html?cat=banyo"><i class="fa fa-angle-right"></i> Banyo Mobilyaları</a></li>
+            <li><a href="urunler.html?cat=modul"><i class="fa fa-angle-right"></i> Minifix Delikli Modül Gövdeleri</a></li>
+            <li><a href="urunler.html"><i class="fa fa-angle-right"></i> Fason CNC Kesim & Ebatlama</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolon 4: İletişim Bilgileri -->
+        <div class="footer-col">
+          <h4>İletişim Bilgileri</h4>
+          <div class="footer-contact-item">
+            <i class="fa fa-instagram" style="color:#e1306c;"></i>
+            <div><a href="https://www.instagram.com/alen_cnc10/" target="_blank" style="color:#38bdf8; font-weight:700;">@alen_cnc10</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa fa-phone"></i>
+            <div><a href="tel:+905533842459">+90 553 384 24 59</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa fa-whatsapp" style="color:#25d366;"></i>
+            <div><a href="https://api.whatsapp.com/send?phone=905533842459" target="_blank" style="color:#25d366; font-weight:700;">+90 553 384 24 59</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa fa-envelope-o"></i>
+            <div><a href="mailto:info@alencnc.com">info@alencnc.com</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa fa-map-marker"></i>
+            <div>Aşık Veysel Mah. 5837. Sk. No: 3-5, Karabağlar / İzmir / Türkiye</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 <strong>Alen CNC Mobilya & Kapı Sistemleri</strong>. Tüm Hakları Saklıdır.</div>
+        <div style="display:flex; gap:16px;">
+          <a href="https://www.instagram.com/alen_cnc10/" target="_blank"><i class="fa fa-instagram"></i> @alen_cnc10</a>
+          <a href="#">Gizlilik Politikası</a>
+          <a href="odeme.html">Sanal Ödeme</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       SABİT AKSİYON BUTONLARI (WHATSAPP & YUKARI ÇIK)
+       ========================================================================== -->
+  <div class="floating-actions">
+    <a href="https://api.whatsapp.com/send?phone=905533842459" target="_blank" class="btn-floating btn-whatsapp" title="WhatsApp Canlı Destek">
+      <span class="pulse-ring"></span>
+      <i class="fa fa-whatsapp"></i>
+    </a>
+    <button class="btn-floating btn-scroll-top" id="scroll-top-btn" title="Yukarı Çık">
+      <i class="fa fa-chevron-up"></i>
+    </button>
+  </div>
+
+  <!-- ==========================================================================
+       CANLI ARAMA MODALI (LIVE SEARCH)
+       ========================================================================== -->
+  <div class="search-modal-overlay" id="search-modal">
+    <div class="search-box-container">
+      <div class="search-input-wrap">
+        <i class="fa fa-search"></i>
+        <input type="text" id="live-search-input" placeholder="Kapı, kapak veya ürün kodu arayın (Örn: GK-5004, Soft Kaşmir)..." autocomplete="off">
+        <button class="btn-close-drawer" id="btn-search-close" style="width:auto; padding:0 8px;"><i class="fa fa-times"></i></button>
+      </div>
+      <div class="search-results-list" id="search-results">
+        <div style="padding:20px; color:#94a3b8; text-align:center;">Aramak istediğiniz ürünün adı veya kodunu yazın...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       AÇILIR SEPET ÇEKMECESİ (SLIDE-IN CART DRAWER)
+       ========================================================================== -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Alışveriş Sepeti">
+    <div class="cart-header">
+      <h3><i class="fa fa-shopping-bag" style="color:var(--accent);"></i> Alışveriş Sepetim</h3>
+      <button class="btn-close-drawer" id="btn-close-cart"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="cart-items-body" id="cart-drawer-items">
+      <!-- cart.js tarafından doldurulacak -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-summary-total">
+        <span>Ara Toplam:</span>
+        <span id="cart-drawer-total">₺0</span>
+      </div>
+      <div class="cart-actions">
+        <a href="sepet.html" class="btn btn-outline btn-block"><i class="fa fa-shopping-cart"></i> Sepet Detayı</a>
+        <a href="odeme.html" class="btn btn-accent btn-block"><i class="fa fa-lock"></i> Güvenli Ödeme Yap</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MOBİL MENÜ ÇEKMECESİ (OFF-CANVAS MOBILE DRAWER)
+       ========================================================================== -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo_alen.png" alt="Alen CNC Logo" class="brand-logo-img">
+        <div class="brand-logo-text">
+          <span class="logo-main" style="color:#fff;">ALEN <span>CNC</span></span>
+          <span class="logo-sub" style="color:#94a3b8;">CNC İŞLEME • TASARIM & ÜRETİM</span>
+        </div>
+      </a>
+      <button class="btn-close-drawer" id="mobile-drawer-close" style="color:#fff;"><i class="fa fa-times"></i></button>
+    </div>
+    <ul class="mobile-drawer-links">
+      <li><a href="index.html">Anasayfa <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="kurumsal.html">Kurumsal <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="urunler.html?cat=kapi">Kapı Modelleri <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="urunler.html?cat=kapak">Mutfak Kapakları <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="urunler.html?cat=banyo">Banyo Modülleri <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="urunler.html?cat=modul">Dolap Modülleri <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="urunler.html">Tüm Ürünler <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="#kataloglar">E-Kataloglar <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="odeme.html">Sanal Ödeme & Bayi <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="https://www.instagram.com/alen_cnc10/" target="_blank" style="color:#e1306c;"><i class="fa fa-instagram"></i> Instagram (@alen_cnc10)</a></li>
+      <li><a href="iletisim.html">İletişim <i class="fa fa-angle-right"></i></a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="#teklif-al" class="btn btn-accent btn-block" onclick="document.getElementById('mobile-drawer').classList.remove('active'); document.getElementById('mobile-drawer-overlay').classList.remove('active');">
+        <i class="fa fa-file-text-o"></i> Hızlı Teklif Al
+      </a>
+      <div style="margin-top:14px; text-align:center; font-size:0.88rem;">
+        <a href="tel:+905533842459" style="color:var(--primary); font-weight:700;"><i class="fa fa-phone"></i> +90 553 384 24 59</a>
+      </div>
+      <div style="margin-top:8px; text-align:center;">
+        <a href="https://api.whatsapp.com/send?phone=905533842459" target="_blank" style="color:#25d366; font-weight:700; font-size:0.88rem;"><i class="fa fa-whatsapp"></i> WhatsApp: 0553 384 24 59</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       HIZLI BAKIŞ MODALI (QUICK VIEW & QUOTE MODAL)
+       ========================================================================== -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeProductModal()"><i class="fa fa-times"></i></button>
+      <div class="modal-img-wrap">
+        <img id="modal-img" src="" alt="Ürün Görseli">
+      </div>
+      <div class="modal-content-wrap">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <span class="product-category" id="modal-category">Kategori</span>
+          <span class="product-badge badge-stock" id="modal-badge">Stokta</span>
+        </div>
+        <h3 id="modal-title" style="font-size:1.4rem; color:var(--primary); font-family:'Playfair Display',serif; margin-bottom:6px;">Ürün Başlığı</h3>
+        <span id="modal-code" style="font-size:0.82rem; color:var(--text-muted); margin-bottom:12px; font-weight:600;">Ürün Kodu</span>
+        
+        <div style="font-size:1.5rem; font-weight:800; color:var(--primary-dark); margin-bottom:14px;" id="modal-price">₺0</div>
+        
+        <p id="modal-desc" style="font-size:0.9rem; color:#475569; margin-bottom:16px; line-height:1.6;">Ürün açıklaması burada yer alır.</p>
+        
+        <div style="background:#f8fafc; padding:12px; border-radius:6px; border:1px solid var(--border-color); font-size:0.85rem; color:#64748b; margin-bottom:20px;">
+          <strong>Teknik Özellikler:</strong><br>
+          <span id="modal-spec">Özellik listesi</span>
+        </div>
+
+        <div style="display:flex; gap:12px; align-items:center; margin-bottom:14px;">
+          <label style="font-size:0.85rem; font-weight:600;">Adet:</label>
+          <input type="number" id="modal-qty" value="1" min="1" max="999" style="width:70px; padding:8px 10px; border:1px solid var(--border-color); border-radius:4px;">
+          <button class="btn btn-primary" id="modal-add-cart" style="flex-grow:1;"><i class="fa fa-shopping-bag"></i> Sepete Ekle</button>
+        </div>
+
+        <button class="btn btn-outline" id="modal-quote-btn" style="width:100%;">
+          <i class="fa fa-file-text-o"></i> Özel Ölçü İçin Teklif İste
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Dosyaları -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

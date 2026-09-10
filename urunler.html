@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ürün Kataloğu & Online Mağaza | Alen CNC Mobilya & Kapı Sistemleri</title>
+  <meta name="description" content="Alen CNC: Hassas CNC kesim kapı, lake & membran kapak, banyo ve modüler mobilya gövdeleri. Doğrudan fabrikadan güvenli alışveriş ve toptan teklif imkanı.">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .page-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      padding: 60px 0;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .catalog-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 36px;
+      margin-bottom: 80px;
+    }
+    .catalog-sidebar {
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 24px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+    }
+    .sidebar-widget {
+      margin-bottom: 28px;
+    }
+    .sidebar-widget:last-child {
+      margin-bottom: 0;
+    }
+    .sidebar-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border-color);
+    }
+    .sidebar-category-list li {
+      margin-bottom: 8px;
+    }
+    .sidebar-category-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .sidebar-category-link:hover, .sidebar-category-link.active {
+      background: var(--bg-main);
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .catalog-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      background: #ffffff;
+      padding: 14px 20px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    @media (max-width: 900px) {
+      .catalog-layout {
+        grid-template-columns: 1fr;
+      }
+      .catalog-sidebar {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <aside class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <a href="tel:+905533842459"><i class="fa fa-phone"></i> +90 553 384 24 59</a>
+        <a href="mailto:info@alencnc.com"><i class="fa fa-envelope-o"></i> info@alencnc.com</a>
+        <a href="https://api.whatsapp.com/send?phone=905533842459" target="_blank" style="color:var(--whatsapp);"><i class="fa fa-whatsapp"></i> WhatsApp: 0553 384 24 59</a>
+      </div>
+      <div class="top-bar-right">
+        <a href="https://www.instagram.com/alen_cnc10/" target="_blank" class="badge-link" style="background:linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color:#fff; border:none; font-weight:700;"><i class="fa fa-instagram"></i> @alen_cnc10</a>
+        <a href="odeme.html" class="badge-link"><i class="fa fa-credit-card"></i> Sanal Ödeme</a>
+        <a href="odeme.html?tab=bayi" class="badge-link"><i class="fa fa-user-circle"></i> Bayi Girişi</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo_alen.png" alt="Alen CNC Logo" class="brand-logo-img">
+        <div class="brand-logo-text">
+          <span class="logo-main">ALEN <span>CNC</span></span>
+          <span class="logo-sub">CNC İŞLEME • TASARIM & ÜRETİM</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html" class="nav-link">Anasayfa</a></li>
+          <li class="nav-item"><a href="kurumsal.html" class="nav-link">Kurumsal</a></li>
+          <li class="nav-item"><a href="urunler.html" class="nav-link active">Online Mağaza</a></li>
+          <li class="nav-item"><a href="index.html#kataloglar" class="nav-link">E-Katalog</a></li>
+          <li class="nav-item"><a href="iletisim.html" class="nav-link">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn" id="btn-search-toggle" title="Ürün Ara"><i class="fa fa-search"></i></button>
+        <button class="action-btn" id="btn-cart-toggle" title="Alışveriş Sepeti">
+          <i class="fa fa-shopping-bag"></i>
+          <span class="cart-badge" style="display:none;">0</span>
+        </button>
+        <a href="index.html#teklif-al" class="btn-header-quote"><i class="fa fa-file-text-o"></i> Teklif Al</a>
+        <button class="action-btn mobile-menu-toggle" id="mobile-menu-btn"><i class="fa fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SAYFA BAŞLIĞI BANNER -->
+  <div class="page-banner">
+    <div class="container">
+      <h1 style="font-family:'Playfair Display',serif; font-size:2.5rem; margin-bottom:8px;">Ürün Koleksiyonları & E-Mağaza</h1>
+      <p style="color:#cbd5e1; font-size:1rem;">Tüm iç mekan kapıları, mutfak/mobilya kapakları, banyo takımları ve modüller</p>
+    </div>
+  </div>
+
+  <!-- KATALOG VE MAĞAZA DÜZENİ -->
+  <main class="container">
+    <div class="catalog-layout">
+      <!-- Sol Kenar Çubuğu (Filtreler) -->
+      <aside class="catalog-sidebar">
+        <div class="sidebar-widget">
+          <h3 class="sidebar-title">Kategoriler</h3>
+          <ul class="sidebar-category-list">
+            <li><a href="#" class="sidebar-category-link active" data-filter="all">Tüm Ürünler <span id="count-all">18</span></a></li>
+            <li><a href="#" class="sidebar-category-link" data-filter="duvar">3D Parametrik Duvar Sanatı <span id="count-duvar">6</span></a></li>
+            <li><a href="#" class="sidebar-category-link" data-filter="kapi">İç Mekan Kapıları <span id="count-kapi">4</span></a></li>
+            <li><a href="#" class="sidebar-category-link" data-filter="kapak">Mobilya Kapakları <span id="count-kapak">4</span></a></li>
+            <li><a href="#" class="sidebar-category-link" data-filter="banyo">Banyo Mobilyaları <span id="count-banyo">2</span></a></li>
+            <li><a href="#" class="sidebar-category-link" data-filter="modul">Modüler Dolap Gövdeleri <span id="count-modul">2</span></a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3 class="sidebar-title">Hızlı Filtre</h3>
+          <div style="display:flex; flex-direction:column; gap:10px; font-size:0.85rem; color:var(--text-main);">
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+              <input type="checkbox" id="filter-stock-only"> Sadece Stokta Olanlar
+            </label>
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+              <input type="checkbox" id="filter-discount-only"> İndirimli Modeller
+            </label>
+          </div>
+        </div>
+
+        <div class="sidebar-widget" style="background:#f8fafc; padding:16px; border-radius:6px;">
+          <h4 style="font-size:0.9rem; color:var(--primary); margin-bottom:6px;"><i class="fa fa-phone" style="color:var(--accent);"></i> Toptan Alım & Proje</h4>
+          <p style="font-size:0.8rem; color:#64748b; margin-bottom:12px;">Toplu konut ve mimari projeleriniz için özel iskonto oranları.</p>
+          <a href="https://api.whatsapp.com/send?phone=905533842459" target="_blank" class="btn btn-sm btn-accent" style="width:100%;"><i class="fa fa-whatsapp"></i> Özel Fiyat İste</a>
+        </div>
+      </aside>
+
+      <!-- Sağ Ürün Listesi -->
+      <section>
+        <div class="catalog-top-bar">
+          <div style="font-size:0.9rem; color:var(--text-muted);">
+            Toplam <strong id="product-total-display" style="color:var(--primary);">12</strong> ürün listeleniyor
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <label for="sort-select" style="font-size:0.85rem; font-weight:600;">Sıralama:</label>
+            <select id="sort-select" class="form-control" style="width:auto; padding:6px 12px; font-size:0.85rem;">
+              <option value="default">Önerilen Sıralama</option>
+              <option value="price-asc">Fiyat: Düşükten Yükseğe</option>
+              <option value="price-desc">Fiyat: Yüksekten Düşüğe</option>
+              <option value="name">Ürün Adı (A-Z)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Ürün Izgarası -->
+        <div class="product-grid" id="catalog-products-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <!-- Dinamik doldurulacaktır -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none; padding-top:0;">
+        <div>© 2026 <strong>Alen CNC Mobilya & Kapı Sistemleri</strong>. Tüm Hakları Saklıdır.</div>
+        <div style="display:flex; gap:16px;">
+          <a href="https://www.instagram.com/alen_cnc10/" target="_blank"><i class="fa fa-instagram"></i> @alen_cnc10</a>
+          <a href="index.html">Anasayfaya Dön</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALLAR & SEPET ÇEKMECESİ -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3><i class="fa fa-shopping-bag" style="color:var(--accent);"></i> Sepetim</h3>
+      <button class="btn-close-drawer" id="btn-close-cart"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="cart-items-body" id="cart-drawer-items"></div>
+    <div class="cart-footer">
+      <div class="cart-summary-total">
+        <span>Ara Toplam:</span>
+        <span id="cart-drawer-total">₺0</span>
+      </div>
+      <div class="cart-actions">
+        <a href="sepet.html" class="btn btn-outline btn-block">Sepete Git</a>
+        <a href="odeme.html" class="btn btn-accent btn-block">Ödeme Adımına Geç</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- HIZLI BAKIŞ MODALI -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeProductModal()"><i class="fa fa-times"></i></button>
+      <div class="modal-img-wrap"><img id="modal-img" src="" alt="Ürün Görseli"></div>
+      <div class="modal-content-wrap">
+        <span class="product-category" id="modal-category">Kategori</span>
+        <h3 id="modal-title" style="font-size:1.4rem; color:var(--primary); font-family:'Playfair Display',serif; margin-bottom:6px;">Ürün</h3>
+        <span id="modal-code" style="font-size:0.82rem; color:var(--text-muted); margin-bottom:12px; font-weight:600;">Kod</span>
+        <div style="font-size:1.5rem; font-weight:800; color:var(--primary-dark); margin-bottom:14px;" id="modal-price">₺0</div>
+        <p id="modal-desc" style="font-size:0.9rem; color:#475569; margin-bottom:16px; line-height:1.6;"></p>
+        <div style="background:#f8fafc; padding:12px; border-radius:6px; border:1px solid var(--border-color); font-size:0.85rem; color:#64748b; margin-bottom:20px;">
+          <strong>Teknik Detaylar:</strong><br><span id="modal-spec"></span>
+        </div>
+        <button class="btn btn-primary" id="modal-add-cart" style="margin-bottom:10px;"><i class="fa fa-shopping-bag"></i> Sepete Ekle</button>
+        <button class="btn btn-outline" id="modal-quote-btn"><i class="fa fa-file-text-o"></i> Teklif İste</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARAMA MODALI -->
+  <div class="search-modal-overlay" id="search-modal">
+    <div class="search-box-container">
+      <div class="search-input-wrap">
+        <i class="fa fa-search"></i>
+        <input type="text" id="live-search-input" placeholder="Aramak istediğiniz ürün veya kod...">
+        <button class="btn-close-drawer" id="btn-search-close"><i class="fa fa-times"></i></button>
+      </div>
+      <div class="search-results-list" id="search-results"></div>
+    </div>
+  </div>
+
+  <div class="floating-actions">
+    <a href="https://api.whatsapp.com/send?phone=905533842459" target="_blank" class="btn-floating btn-whatsapp" title="WhatsApp Canlı Destek">
+      <span class="pulse-ring"></span>
+      <i class="fa fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Dinamik kategori sayıları güncelleme
+      const countAll = document.getElementById('count-all');
+      if (countAll) countAll.textContent = PRODUCTS.length;
+      ['duvar', 'kapi', 'kapak', 'banyo', 'modul'].forEach(cat => {
+        const el = document.getElementById(`count-${cat}`);
+        if (el) el.textContent = PRODUCTS.filter(p => p.category === cat).length;
+      });
+
+      // URL parametresinden kategori okuma (örn: urunler.html?cat=duvar)
+      const urlParams = new URLSearchParams(window.location.search);
+      const catParam = urlParams.get('cat') || 'all';
+
+      // Kenar çubuğu link tıklama
+      const catLinks = document.querySelectorAll('.sidebar-category-link');
+      catLinks.forEach(link => {
+        if (link.getAttribute('data-filter') === catParam) {
+          catLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          catLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+          renderCatalogPage();
+        });
+      });
+
+      // Hızlı Filtre Checkboxları
+      const stockCheck = document.getElementById('filter-stock-only');
+      const discountCheck = document.getElementById('filter-discount-only');
+      if (stockCheck) stockCheck.addEventListener('change', () => renderCatalogPage());
+      if (discountCheck) discountCheck.addEventListener('change', () => renderCatalogPage());
+
+      // Sıralama
+      const sortSelect = document.getElementById('sort-select');
+      if (sortSelect) {
+        sortSelect.addEventListener('change', () => {
+          renderCatalogPage();
+        });
+      }
+
+      renderCatalogPage();
+    });
+
+    function renderCatalogPage() {
+      const activeLink = document.querySelector('.sidebar-category-link.active');
+      const category = activeLink ? activeLink.getAttribute('data-filter') : 'all';
+      const sortSelect = document.getElementById('sort-select');
+      const sortBy = sortSelect ? sortSelect.value : 'default';
+
+      const stockOnly = document.getElementById('filter-stock-only')?.checked;
+      const discountOnly = document.getElementById('filter-discount-only')?.checked;
+
+      let list = category === 'all' ? [...PRODUCTS] : PRODUCTS.filter(p => p.category === category);
+
+      if (stockOnly) {
+        list = list.filter(p => p.inStock);
+      }
+      if (discountOnly) {
+        list = list.filter(p => p.oldPrice && p.oldPrice > p.price);
+      }
+
+      if (sortBy === 'price-asc') list.sort((a,b) => a.price - b.price);
+      else if (sortBy === 'price-desc') list.sort((a,b) => b.price - a.price);
+      else if (sortBy === 'name') list.sort((a,b) => a.name.localeCompare(b.name));
+
+      const container = document.getElementById('catalog-products-grid');
+      const totalDisplay = document.getElementById('product-total-display');
+
+      if (container) {
+        if (list.length === 0) {
+          container.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding: 40px; color:#64748b; background:#fff; border-radius:8px; border:1px dashed var(--border-color);"><i class="fa fa-info-circle" style="font-size:2rem; margin-bottom:10px; color:var(--accent);"></i><p>Seçilen filtrelere uygun ürün bulunamadı.</p></div>`;
+        } else {
+          container.innerHTML = list.map(p => createProductCard(p)).join('');
+        }
+      }
+      if (totalDisplay) {
+        totalDisplay.textContent = list.length;
+      }
+    }
+  </script>
+</body>
+</html>

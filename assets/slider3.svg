@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="s3grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="800" fill="url(#s3grad)"/>
+
+  <!-- Alen CNC Kapı Modelleri -->
+  <g transform="translate(1120, 90)">
+    <!-- Anthracite CNC Router Door -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="200" height="580" rx="6" fill="#1e293b" stroke="rgba(56,189,248,0.3)" stroke-width="2"/>
+      <line x1="25" y1="40" x2="25" y2="540" stroke="#0284c7" stroke-width="4"/>
+      <rect x="175" y="280" width="8" height="60" rx="4" fill="#38bdf8"/>
+    </g>
+
+    <!-- Center Precision White Door -->
+    <g transform="translate(230, -25)">
+      <rect x="0" y="0" width="220" height="620" rx="6" fill="#f8fafc" stroke="url(#cyanGlow)" stroke-width="3"/>
+      <rect x="25" y="50" width="170" height="300" rx="4" fill="#0f172a" opacity="0.08"/>
+      <rect x="195" y="320" width="8" height="60" rx="4" fill="#0284c7"/>
+    </g>
+
+    <!-- CNC Routed Wood Door -->
+    <g transform="translate(480, 20)">
+      <rect x="0" y="0" width="200" height="560" rx="6" fill="#334155" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+      <line x1="0" y1="180" x2="200" y2="180" stroke="#0284c7" stroke-width="3"/>
+      <line x1="0" y1="360" x2="200" y2="360" stroke="#0284c7" stroke-width="3"/>
+      <rect x="175" y="270" width="8" height="60" rx="4" fill="#38bdf8"/>
+    </g>
+  </g>
+
+  <rect width="1000" height="800" fill="url(#s3grad)" opacity="0.9"/>
+</svg>

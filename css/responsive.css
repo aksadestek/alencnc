@@ -1,0 +1,319 @@
+/* ==========================================================================
+   ARTİSAN MOBİLYA & KAPI SİSTEMLERİ - RESPONSIVE STİLLER (responsive.css)
+   ========================================================================== */
+
+/* Tablet & Küçük Ekranlar (1024px altı) */
+@media (max-width: 1024px) {
+  .hero-slider-container {
+    min-height: auto;
+    height: auto;
+  }
+
+  .hero-slide {
+    position: relative;
+    height: auto;
+    padding: 40px 0 60px;
+  }
+
+  .hero-slide:not(.active) {
+    display: none;
+  }
+
+  .hero-slide-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .hero-badge {
+    align-self: center;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-features-strip {
+    justify-content: center;
+  }
+
+  .hero-showcase-box {
+    max-width: 340px;
+    height: 400px;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .quote-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet & Küçük Ekranlar (992px altı) */
+@media (max-width: 992px) {
+  .main-nav {
+    display: none; /* Tablet ve mobilde yan menü açılır */
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Telefon & Küçük Tablet (768px altı) */
+@media (max-width: 768px) {
+  .top-bar {
+    display: none; /* Mobilde sadeleştirilmiş görünüm */
+  }
+
+  .main-header .container {
+    height: 70px;
+  }
+
+  .btn-header-quote {
+    display: none; /* Üst bardaki teklif butonu mobilde gizlenip menüye alınır */
+  }
+
+  .hero-slider-container {
+    height: 480px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-desc {
+    font-size: 0.92rem;
+    margin-bottom: 20px;
+  }
+
+  .slider-arrow {
+    display: none; /* Mobilde dokunmatik veya noktalı geçiş */
+  }
+
+  .category-section {
+    margin-top: 0;
+    padding: 50px 0;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .product-card .product-thumb {
+    padding-top: 100%;
+  }
+
+  .modal-card {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-img-wrap {
+    padding: 20px;
+  }
+
+  .modal-img-wrap img {
+    max-height: 240px;
+  }
+
+  .modal-content-wrap {
+    padding: 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .floating-actions {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .btn-floating {
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Telefonlar (480px altı) */
+@media (max-width: 480px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card {
+    height: 300px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .catalog-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .catalog-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .quote-form-side, .quote-info-side {
+    padding: 24px 18px;
+  }
+}
+
+/* ==========================================================================
+   MOBILE OFF-CANVAS MENU DRAWER
+   ========================================================================== */
+.mobile-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 2200;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.mobile-drawer-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 300px;
+  max-width: 85vw;
+  height: 100%;
+  background: #ffffff;
+  z-index: 2201;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-drawer.active {
+  left: 0;
+}
+
+.mobile-drawer-header {
+  padding: 24px 20px;
+  background: var(--primary-dark);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-drawer-links {
+  padding: 20px 0;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.mobile-drawer-links li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mobile-drawer-links li a:hover {
+  background: var(--bg-main);
+  color: var(--accent);
+}
+
+.mobile-drawer-footer {
+  padding: 20px 24px;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-main);
+}
+
+@media (max-width: 992px) {
+  .spotlight-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .instagram-grid {
+    grid-template-columns: 1fr;
+  }
+  .spotlight-title {
+    font-size: 1.75rem;
+  }
+}

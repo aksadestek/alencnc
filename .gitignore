@@ -1,0 +1,10 @@
+﻿# Operating System Files
+Thumbs.db
+ehthumbs.db
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

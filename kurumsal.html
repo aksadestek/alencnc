@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurumsal & Üretim Gücümüz | Alen CNC Mobilya & Kapı Sistemleri</title>
+  <meta name="description" content="Alen CNC: İleri teknoloji CNC işleme merkezleri, PVC membran pres hatları ve uzman kadromuzla yüksek standartlı kapı ve mobilya kapağı üretimi.">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .about-story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin: 60px 0;
+    }
+    .about-img-box {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-hover);
+      position: relative;
+    }
+    .about-img-box img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin: 50px 0;
+    }
+    .value-card {
+      background: #ffffff;
+      padding: 32px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .value-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent);
+    }
+    .value-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      background: var(--accent-light);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 900px) {
+      .about-story-grid {
+        grid-template-columns: 1fr;
+      }
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <aside class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <a href="tel:+905533842459"><i class="fa fa-phone"></i> +90 553 384 24 59</a>
+        <a href="mailto:info@alencnc.com"><i class="fa fa-envelope-o"></i> info@alencnc.com</a>
+        <a href="https://api.whatsapp.com/send?phone=905533842459" target="_blank" style="color:var(--whatsapp);"><i class="fa fa-whatsapp"></i> WhatsApp: 0553 384 24 59</a>
+      </div>
+      <div class="top-bar-right">
+        <a href="https://www.instagram.com/alen_cnc10/" target="_blank" class="badge-link" style="background:linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color:#fff; border:none; font-weight:700;"><i class="fa fa-instagram"></i> @alen_cnc10</a>
+        <a href="odeme.html" class="badge-link"><i class="fa fa-credit-card"></i> Sanal Ödeme</a>
+        <a href="odeme.html?tab=bayi" class="badge-link"><i class="fa fa-user-circle"></i> Bayi Girişi</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo_alen.png" alt="Alen CNC Logo" class="brand-logo-img">
+        <div class="brand-logo-text">
+          <span class="logo-main">ALEN <span>CNC</span></span>
+          <span class="logo-sub">CNC İŞLEME • TASARIM & ÜRETİM</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html" class="nav-link">Anasayfa</a></li>
+          <li class="nav-item"><a href="kurumsal.html" class="nav-link active">Kurumsal</a></li>
+          <li class="nav-item"><a href="urunler.html" class="nav-link">Ürünler</a></li>
+          <li class="nav-item"><a href="index.html#kataloglar" class="nav-link">E-Katalog</a></li>
+          <li class="nav-item"><a href="iletisim.html" class="nav-link">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn" id="btn-cart-toggle" title="Sepet"><i class="fa fa-shopping-bag"></i><span class="cart-badge" style="display:none;">0</span></button>
+        <a href="index.html#teklif-al" class="btn-header-quote"><i class="fa fa-file-text-o"></i> Teklif Al</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-banner" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 60px 0; color: #fff; text-align: center;">
+    <div class="container">
+      <h1 style="font-family:'Playfair Display',serif; font-size:2.5rem; margin-bottom:8px;">Kurumsal Hikayemiz & CNC Üretim Gücümüz</h1>
+      <p style="color:#cbd5e1; font-size:1rem;">Mikron düzeyinde hassasiyet, robotik otomasyon ve zanaatın buluşması</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <!-- Hikaye & Vizyon -->
+    <div class="about-story-grid">
+      <div>
+        <span class="section-subtitle">Alen CNC Güvencesiyle</span>
+        <h2 style="font-family:'Playfair Display',serif; font-size:2.2rem; color:var(--primary); margin-bottom:18px;">
+          Mobilya ve Kapı Üretiminde CNC Teknolojisi
+        </h2>
+        <p style="color:#475569; font-size:1rem; line-height:1.8; margin-bottom:16px;">
+          <strong>Alen CNC</strong> olarak temel ilkemiz; ahşabın doğallığını en ileri CNC router ve robotik frezeleme teknolojileri ile harmanlayarak, mimarların ve mobilya üreticilerinin projelerine kusursuz çözümler sunmaktır.
+        </p>
+        <p style="color:#475569; font-size:1rem; line-height:1.8; margin-bottom:24px;">
+          Modern üretim tesislerimizde; yüksek hızlı 5 eksenli CNC işleme merkezleri, vakum membran pres hatları ve UV kurutmalı boya robotları ile iç mekan kapılarından mutfak dolap kapaklarına kadar her parçayı sıfır hata toleransıyla üretiyoruz.
+        </p>
+        <div style="display:flex; gap:20px;">
+          <a href="index.html#kataloglar" class="btn btn-accent"><i class="fa fa-book"></i> Kataloglarımızı İnceleyin</a>
+          <a href="https://www.instagram.com/alen_cnc10/" target="_blank" class="btn instagram-btn-gradient"><i class="fa fa-instagram"></i> Atölye Günlükleri (@alen_cnc10)</a>
+        </div>
+      </div>
+
+      <div class="about-img-box">
+        <img src="assets/logo_wall.jpg" alt="Alen CNC Fabrika ve Showroom">
+      </div>
+    </div>
+
+
+
+    <!-- Temel Değerlerimiz -->
+    <div style="margin-bottom:80px;">
+      <div class="section-header">
+        <span class="section-subtitle">Felsefemiz</span>
+        <h2 class="section-title">Bizi Farklı Kılan Değerlerimiz</h2>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon"><i class="fa fa-microchip"></i></div>
+          <h3 style="font-size:1.2rem; color:var(--primary); margin-bottom:10px;">İleri Teknoloji Parkuru</h3>
+          <p style="color:#64748b; font-size:0.9rem; line-height:1.6;">Alman ve İtalyan menşeili 5 eksenli CNC işleme merkezleri ve robotik lake püskürtme hatları ile milimetrik hassasiyet.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon"><i class="fa fa-leaf"></i></div>
+          <h3 style="font-size:1.2rem; color:var(--primary); margin-bottom:10px;">Çevre ve E1 Standartları</h3>
+          <p style="color:#64748b; font-size:0.9rem; line-height:1.6;">Sağlığa zararlı formaldehit salınımı yapmayan E1 sertifikalı MDF ve su bazlı İtalyan boya formülasyonları.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon"><i class="fa fa-handshake-o"></i></div>
+          <h3 style="font-size:1.2rem; color:var(--primary); margin-bottom:10px;">Zamanında Teslimat Güvencesi</h3>
+          <p style="color:#64748b; font-size:0.9rem; line-height:1.6;">Güçlü stok hacmi ve entegre ERP sipariş takip altyapımızla projelerinizin termin tarihlerini asla aksatmıyoruz.</p>
+        </div>
+      </div>
+    <!-- İmza Projelerimiz & Mimari Çözümler -->
+    <div style="margin-bottom:80px;">
+      <div class="section-header">
+        <span class="section-subtitle">Referanslarımız</span>
+        <h2 class="section-title">İmza Projelerimiz & Atölye Üretimleri</h2>
+        <p class="section-desc">Kafeler, klinikler ve kurumsal mekanlar için gerçekleştirdiğimiz 3D parametrik ahşap sanatı ve özel CNC projeleri.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
+        <div style="background:#fff; border-radius:12px; overflow:hidden; border:1px solid var(--border-color); box-shadow:var(--shadow-sm); transition:transform 0.3s ease;">
+          <div style="height:220px; overflow:hidden; position:relative;">
+            <img src="assets/projects/vuna_cafe_wall.jpg" alt="VUNA Cafe Parametrik Duvar" style="width:100%; height:100%; object-fit:cover;">
+            <span style="position:absolute; top:12px; left:12px; background:var(--accent); color:#fff; font-size:0.75rem; font-weight:700; padding:4px 10px; border-radius:4px;">Son Projemiz</span>
+          </div>
+          <div style="padding:20px;">
+            <h4 style="font-size:1.1rem; color:var(--primary); margin-bottom:8px; font-weight:700;">VUNA Cafe 3D Ahşap Duvar Sanatı</h4>
+            <p style="font-size:0.85rem; color:#64748b; line-height:1.6; margin-bottom:14px;">Yüzlerce masif ahşap çıtanın parametrik eğrilerle birleştiği, mekana sanatsal bir kimlik kazandıran dev 3D kadın yüzü heykeli.</p>
+            <a href="https://api.whatsapp.com/send?phone=905533842459&text=Merhaba,%20VUNA%20Cafe%20benzeri%203D%20duvar%20projesi%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" style="font-size:0.85rem; color:var(--accent); font-weight:700; display:inline-flex; align-items:center; gap:6px;"><i class="fa fa-whatsapp"></i> Proje Detayı İste &rarr;</a>
+          </div>
+        </div>
+
+        <div style="background:#fff; border-radius:12px; overflow:hidden; border:1px solid var(--border-color); box-shadow:var(--shadow-sm);">
+          <div style="height:220px; overflow:hidden; position:relative;">
+            <img src="assets/projects/reception_face_relief.jpg" alt="Klinik Lobi Rölyefi" style="width:100%; height:100%; object-fit:cover;">
+            <span style="position:absolute; top:12px; left:12px; background:var(--primary); color:#fff; font-size:0.75rem; font-weight:700; padding:4px 10px; border-radius:4px;">Klinik & Lobi</span>
+          </div>
+          <div style="padding:20px;">
+            <h4 style="font-size:1.1rem; color:var(--primary); margin-bottom:8px; font-weight:700;">Estetik Klinik Danışma Rölyefi</h4>
+            <p style="font-size:0.85rem; color:#64748b; line-height:1.6; margin-bottom:14px;">Özel aydınlatma entegreli, akustik ahşap çıta arka planıyla klinik karşılama lobisine estetik prestij katan dev yüz rölyefi.</p>
+            <a href="https://api.whatsapp.com/send?phone=905533842459&text=Merhaba,%20klinik%20ve%20lobi%203D%20ahşap%20rölyef%20projesi%20için%20fiyat%20almak%20istiyorum." target="_blank" style="font-size:0.85rem; color:var(--accent); font-weight:700; display:inline-flex; align-items:center; gap:6px;"><i class="fa fa-whatsapp"></i> Proje Detayı İste &rarr;</a>
+          </div>
+        </div>
+
+        <div style="background:#fff; border-radius:12px; overflow:hidden; border:1px solid var(--border-color); box-shadow:var(--shadow-sm);">
+          <div style="height:220px; overflow:hidden; position:relative;">
+            <img src="assets/projects/dental_clinic_tooth.jpg" alt="Diş Kliniği Parametrik Diş" style="width:100%; height:100%; object-fit:cover;">
+            <span style="position:absolute; top:12px; left:12px; background:var(--secondary); color:#fff; font-size:0.75rem; font-weight:700; padding:4px 10px; border-radius:4px;">Tematik Tasarım</span>
+          </div>
+          <div style="padding:20px;">
+            <h4 style="font-size:1.1rem; color:var(--primary); margin-bottom:8px; font-weight:700;">Diş Kliniği 3D Parametrik Diş Duvarı</h4>
+            <p style="font-size:0.85rem; color:#64748b; line-height:1.6; margin-bottom:14px;">Diş formunun parametrik ahşap dilimleriyle harmanlandığı, modern klinik bekleme salonları için tematik sanatsal uygulama.</p>
+            <a href="https://api.whatsapp.com/send?phone=905533842459&text=Merhaba,%20diş%20kliniği%20ahşap%20duvar%20sanatı%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" style="font-size:0.85rem; color:var(--accent); font-weight:700; display:inline-flex; align-items:center; gap:6px;"><i class="fa fa-whatsapp"></i> Proje Detayı İste &rarr;</a>
+          </div>
+        </div>
+
+        <div style="background:#fff; border-radius:12px; overflow:hidden; border:1px solid var(--border-color); box-shadow:var(--shadow-sm);">
+          <div style="height:220px; overflow:hidden; position:relative;">
+            <img src="assets/projects/cnc_workshop_milling.jpg" alt="CNC Atölye Üretimi" style="width:100%; height:100%; object-fit:cover;">
+            <span style="position:absolute; top:12px; left:12px; background:#10b981; color:#fff; font-size:0.75rem; font-weight:700; padding:4px 10px; border-radius:4px;">5 Eksen Frezeleme</span>
+          </div>
+          <div style="padding:20px;">
+            <h4 style="font-size:1.1rem; color:var(--primary); margin-bottom:8px; font-weight:700;">Atölye Hassas CNC İşleme</h4>
+            <p style="font-size:0.85rem; color:#64748b; line-height:1.6; margin-bottom:14px;">0.05 mm toleransla çalışan yüksek hızlı CNC merkezlerimizde MDF, masif ve alüminyum kompozit panel işleme gücü.</p>
+            <a href="https://www.instagram.com/alen_cnc10/" target="_blank" style="font-size:0.85rem; color:#e1306c; font-weight:700; display:inline-flex; align-items:center; gap:6px;"><i class="fa fa-instagram"></i> Instagram'da İncele &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 <strong>Alen CNC Mobilya & Kapı Sistemleri</strong>. Tüm Hakları Saklıdır.</div>
+        <div><a href="index.html">Anasayfaya Dön</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-actions">
+    <a href="https://api.whatsapp.com/send?phone=905533842459" target="_blank" class="btn-floating btn-whatsapp" title="WhatsApp Canlı Destek">
+      <span class="pulse-ring"></span>
+      <i class="fa fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <script src="js/cart.js"></script>
+</body>
+</html>

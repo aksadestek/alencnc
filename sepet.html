@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alışveriş Sepetim | Alen CNC Mobilya & Kapı Sistemleri</title>
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .cart-page-grid {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 36px;
+      margin: 40px 0 80px;
+    }
+    .cart-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+    .cart-table th {
+      background: #f8fafc;
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .cart-table td {
+      padding: 20px;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: middle;
+    }
+    .cart-page-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .cart-page-item img {
+      width: 80px;
+      height: 80px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+    }
+    .cart-summary-box {
+      background: #ffffff;
+      padding: 28px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+    }
+    @media (max-width: 900px) {
+      .cart-page-grid {
+        grid-template-columns: 1fr;
+      }
+      .cart-table thead {
+        display: none;
+      }
+      .cart-table, .cart-table tbody, .cart-table tr, .cart-table td {
+        display: block;
+        width: 100%;
+      }
+      .cart-table tr {
+        margin-bottom: 16px;
+        border-bottom: 2px solid var(--border-color);
+      }
+      .cart-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <aside class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <a href="tel:+905533842459"><i class="fa fa-phone"></i> +90 553 384 24 59</a>
+        <a href="mailto:info@alencnc.com"><i class="fa fa-envelope-o"></i> info@alencnc.com</a>
+        <a href="https://api.whatsapp.com/send?phone=905533842459" target="_blank" style="color:var(--whatsapp);"><i class="fa fa-whatsapp"></i> WhatsApp: 0553 384 24 59</a>
+      </div>
+      <div class="top-bar-right">
+        <a href="https://www.instagram.com/alen_cnc10/" target="_blank" class="badge-link" style="background:linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color:#fff; border:none; font-weight:700;"><i class="fa fa-instagram"></i> @alen_cnc10</a>
+        <a href="odeme.html" class="badge-link"><i class="fa fa-credit-card"></i> Sanal Ödeme</a>
+        <a href="odeme.html?tab=bayi" class="badge-link"><i class="fa fa-user-circle"></i> Bayi Girişi</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo_alen.png" alt="Alen CNC Logo" class="brand-logo-img">
+        <div class="brand-logo-text">
+          <span class="logo-main">ALEN <span>CNC</span></span>
+          <span class="logo-sub">CNC İŞLEME • TASARIM & ÜRETİM</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html" class="nav-link">Anasayfa</a></li>
+          <li class="nav-item"><a href="urunler.html" class="nav-link">Ürünler</a></li>
+          <li class="nav-item"><a href="kurumsal.html" class="nav-link">Kurumsal</a></li>
+          <li class="nav-item"><a href="iletisim.html" class="nav-link">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="urunler.html" class="btn btn-sm btn-outline"><i class="fa fa-arrow-left"></i> Alışverişe Devam Et</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEPET SAYFA İÇERİĞİ -->
+  <main class="container">
+    <div style="margin-top:40px;">
+      <h1 style="font-family:'Playfair Display',serif; font-size:2.2rem; color:var(--primary); margin-bottom:8px;">Alışveriş Sepeti</h1>
+      <p style="color:var(--text-muted); font-size:0.95rem;">Sipariş vermek istediğiniz ürünleri ve adetlerini buradan güncelleyebilirsiniz.</p>
+    </div>
+
+    <div class="cart-page-grid" id="cart-page-content">
+      <!-- Sol: Ürün Listesi Tablosu -->
+      <div>
+        <table class="cart-table" id="cart-full-table">
+          <thead>
+            <tr>
+              <th>Ürün</th>
+              <th>Birim Fiyat</th>
+              <th>Adet</th>
+              <th>Toplam</th>
+              <th>İşlem</th>
+            </tr>
+          </thead>
+          <tbody id="cart-page-tbody">
+            <!-- Dinamik doldurulacaktır -->
+          </tbody>
+        </table>
+
+        <div style="display:flex; justify-content:space-between; margin-top:20px;">
+          <a href="urunler.html" class="btn btn-outline"><i class="fa fa-angle-left"></i> Alışverişe Devam Et</a>
+          <button class="btn btn-outline" style="color:var(--danger); border-color:var(--danger);" onclick="if(confirm('Sepetteki tüm ürünleri temizlemek istiyor musunuz?')) Cart.clear();"><i class="fa fa-trash-o"></i> Sepeti Temizle</button>
+        </div>
+      </div>
+
+      <!-- Sağ: Sipariş Özeti -->
+      <aside class="cart-summary-box">
+        <h3 style="font-size:1.25rem; font-weight:700; color:var(--primary); margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border-color);">Sipariş Özeti</h3>
+        
+        <div class="cart-summary-line">
+          <span>Ara Toplam</span>
+          <strong id="page-subtotal">₺0</strong>
+        </div>
+
+        <div class="cart-summary-line">
+          <span>KDV Dahil (%20)</span>
+          <span id="page-tax">₺0</span>
+        </div>
+
+        <div class="cart-summary-line">
+          <span>Kargo & Sevkiyat</span>
+          <span id="page-shipping" style="color:var(--success); font-weight:600;">Hesaplanıyor...</span>
+        </div>
+
+        <div style="font-size:0.8rem; color:#64748b; background:#f8fafc; padding:10px; border-radius:4px; margin:14px 0;">
+          <i class="fa fa-info-circle" style="color:var(--accent);"></i> 5.000 TL ve üzeri siparişlerde <strong>Şehir İçi Ücretsiz Nakliye</strong> geçerlidir.
+        </div>
+
+        <!-- İndirim Kuponu -->
+        <div style="margin:20px 0;">
+          <label style="font-size:0.85rem; font-weight:600; color:var(--primary); display:block; margin-bottom:6px;">İndirim Kuponu / Bayi Kodu</label>
+          <div style="display:flex; gap:8px;">
+            <input type="text" id="coupon-code" class="form-control" placeholder="Örn: ALEN10" style="padding:8px 12px; font-size:0.85rem;">
+            <button class="btn btn-sm btn-outline" onclick="applyCoupon()">Uygula</button>
+          </div>
+          <div id="coupon-msg" style="font-size:0.8rem; margin-top:4px;"></div>
+        </div>
+
+        <div class="cart-summary-total" style="border-top:1px solid var(--border-color); padding-top:14px;">
+          <span>Genel Toplam</span>
+          <span id="page-total" style="color:var(--accent); font-size:1.4rem;">₺0</span>
+        </div>
+
+        <a href="odeme.html" class="btn btn-accent btn-block" style="padding:14px; font-size:1rem; margin-top:14px;">
+          <i class="fa fa-lock"></i> Güvenli Ödemeye Geç
+        </a>
+
+        <div style="text-align:center; margin-top:16px; font-size:0.8rem; color:#94a3b8; display:flex; align-items:center; justify-content:center; gap:8px;">
+          <i class="fa fa-shield" style="font-size:1.2rem; color:var(--success);"></i> 256-Bit SSL Güvenli Alışveriş
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 <strong>Alen CNC Mobilya & Kapı Sistemleri</strong>. Tüm Hakları Saklıdır.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    let discountRate = 0;
+
+    function renderCartPage() {
+      const tbody = document.getElementById('cart-page-tbody');
+      const items = Cart.getItems();
+
+      if (items.length === 0) {
+        document.getElementById('cart-page-content').innerHTML = `
+          <div style="grid-column: 1 / -1; text-align:center; padding:80px 20px; background:#ffffff; border-radius:12px; border:1px solid var(--border-color);">
+            <i class="fa fa-shopping-bag" style="font-size:4rem; color:#cbd5e1; margin-bottom:20px;"></i>
+            <h2 style="color:var(--primary); font-family:'Playfair Display',serif; margin-bottom:12px;">Sepetinizde Ürün Bulunmuyor</h2>
+            <p style="color:#64748b; margin-bottom:24px;">Kapı, mobilya kapağı veya banyo koleksiyonumuzdan dilediğiniz ürünleri sepete ekleyebilirsiniz.</p>
+            <a href="urunler.html" class="btn btn-accent"><i class="fa fa-th-large"></i> Ürünleri Keşfet</a>
+          </div>
+        `;
+        return;
+      }
+
+      tbody.innerHTML = items.map(item => `
+        <tr>
+          <td>
+            <div class="cart-page-item">
+              <img src="${item.image}" alt="${item.name}">
+              <div>
+                <strong style="color:var(--primary);">${item.name}</strong>
+                <div style="font-size:0.8rem; color:#64748b;">Kod: ${item.code} • ${item.categoryName}</div>
+              </div>
+            </div>
+          </td>
+          <td><strong style="color:var(--primary);">${formatPrice(item.price)}</strong></td>
+          <td>
+            <div class="cart-qty-controls" style="margin:0;">
+              <button class="btn-qty" onclick="Cart.updateQty('${item.id}', ${item.quantity - 1})">-</button>
+              <span style="min-width:24px; text-align:center; font-weight:600;">${item.quantity}</span>
+              <button class="btn-qty" onclick="Cart.updateQty('${item.id}', ${item.quantity + 1})">+</button>
+            </div>
+          </td>
+          <td><strong style="color:var(--accent); font-size:1.05rem;">${formatPrice(item.price * item.quantity)}</strong></td>
+          <td>
+            <button onclick="Cart.remove('${item.id}')" class="cart-item-remove" title="Ürünü Sil">
+              <i class="fa fa-trash-o" style="font-size:1.1rem;"></i>
+            </button>
+          </td>
+        </tr>
+      `).join('');
+
+      const subtotal = Cart.getSubtotal();
+      const shipping = Cart.getShipping();
+      const totalDiscount = subtotal * discountRate;
+      const finalTotal = (subtotal - totalDiscount) + shipping;
+
+      document.getElementById('page-subtotal').textContent = formatPrice(subtotal);
+      document.getElementById('page-tax').textContent = formatPrice(Cart.getTax());
+      document.getElementById('page-shipping').textContent = shipping === 0 ? 'Ücretsiz' : formatPrice(shipping);
+      document.getElementById('page-total').textContent = formatPrice(finalTotal);
+    }
+
+    function applyCoupon() {
+      const code = document.getElementById('coupon-code').value.trim().toUpperCase();
+      const msg = document.getElementById('coupon-msg');
+      if (code === 'ALEN10' || code === 'ARTISAN10') {
+        discountRate = 0.10;
+        msg.innerHTML = '<span style="color:var(--success); font-weight:600;"><i class="fa fa-check"></i> %10 İndirim Uygulandı!</span>';
+        renderCartPage();
+      } else {
+        msg.innerHTML = '<span style="color:var(--danger);">Geçersiz kupon kodu.</span>';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCartPage();
+    });
+  </script>
+</body>
+</html>

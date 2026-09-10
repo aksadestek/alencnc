@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgModul" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="bodyWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="cyanAcc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#bgModul)"/>
+
+  <!-- Modular Cabinet Carcass (CNC Precision Drilling) -->
+  <g transform="translate(180, 180)">
+    <rect x="0" y="0" width="440" height="600" rx="8" fill="url(#bodyWhite)" stroke="#0284c7" stroke-width="4"/>
+    <line x1="0" y1="180" x2="440" y2="180" stroke="#94a3b8" stroke-width="4"/>
+    <line x1="220" y1="180" x2="220" y2="420" stroke="#94a3b8" stroke-width="4"/>
+    <line x1="0" y1="420" x2="440" y2="420" stroke="#94a3b8" stroke-width="4"/>
+
+    <!-- Drawers section -->
+    <rect x="20" y="440" width="400" height="60" rx="4" fill="#cbd5e1"/>
+    <circle cx="220" cy="470" r="4" fill="#0284c7"/>
+
+    <rect x="20" y="520" width="400" height="60" rx="4" fill="#cbd5e1"/>
+    <circle cx="220" cy="550" r="4" fill="#0284c7"/>
+
+    <!-- Minifix / CNC Delik İşaretleri -->
+    <circle cx="15" cy="40" r="3" fill="#0284c7"/>
+    <circle cx="15" cy="80" r="3" fill="#0284c7"/>
+    <circle cx="15" cy="120" r="3" fill="#0284c7"/>
+    <circle cx="425" cy="40" r="3" fill="#0284c7"/>
+    <circle cx="425" cy="80" r="3" fill="#0284c7"/>
+    <circle cx="425" cy="120" r="3" fill="#0284c7"/>
+
+    <!-- Precision dimensions -->
+    <path d="M -20 0 L -20 600" stroke="url(#cyanAcc)" stroke-width="2" stroke-dasharray="4 4"/>
+    <text x="-35" y="310" fill="#38bdf8" font-family="'Montserrat', sans-serif" font-size="14" font-weight="700" transform="rotate(-90 -35 310)">720 mm</text>
+
+    <path d="M 0 -20 L 440 -20" stroke="url(#cyanAcc)" stroke-width="2" stroke-dasharray="4 4"/>
+    <text x="220" y="-30" fill="#38bdf8" font-family="'Montserrat', sans-serif" font-size="14" font-weight="700" text-anchor="middle">800 mm</text>
+  </g>
+
+  <!-- Tag -->
+  <rect x="240" y="860" width="320" height="34" rx="17" fill="rgba(15,23,42,0.85)" stroke="url(#cyanAcc)" stroke-width="1.5"/>
+  <text x="400" y="882" fill="#38bdf8" font-family="'Montserrat', sans-serif" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="2">ALEN CNC • MODÜLER GÖVDELER</text>
+</svg>

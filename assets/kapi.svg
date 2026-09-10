@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="doorWall" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="doorWood" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="50%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="cyanAcc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="15" stdDeviation="25" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  
+  <rect width="800" height="1000" fill="url(#doorWall)"/>
+  
+  <!-- Floor line -->
+  <line x1="50" y1="920" x2="750" y2="920" stroke="rgba(56,189,248,0.15)" stroke-width="2"/>
+  
+  <!-- Door frame -->
+  <rect x="230" y="120" width="340" height="800" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="3" filter="url(#shadow)"/>
+  
+  <!-- Door Leaf -->
+  <rect x="245" y="135" width="310" height="785" rx="4" fill="url(#doorWood)"/>
+  
+  <!-- Precision CNC Router Inset Lines -->
+  <line x1="280" y1="200" x2="280" y2="850" stroke="#0f172a" stroke-width="4"/>
+  <rect x="310" y="200" width="210" height="280" rx="4" fill="#1e293b" stroke="url(#cyanAcc)" stroke-width="2"/>
+  <rect x="310" y="520" width="210" height="330" rx="4" fill="#1e293b" stroke="url(#cyanAcc)" stroke-width="2"/>
+  
+  <!-- Handle -->
+  <rect x="260" y="500" width="8" height="85" rx="4" fill="url(#cyanAcc)" filter="url(#shadow)"/>
+  <circle cx="264" cy="595" r="5" fill="#38bdf8"/>
+  
+  <!-- Label overlay -->
+  <rect x="240" y="860" width="320" height="34" rx="17" fill="rgba(15,23,42,0.85)" stroke="url(#cyanAcc)" stroke-width="1.5"/>
+  <text x="400" y="882" fill="#38bdf8" font-family="'Montserrat', sans-serif" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="2">ALEN CNC • KAPI SERİSİ</text>
+</svg>

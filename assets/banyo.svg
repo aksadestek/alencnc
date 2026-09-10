@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgBanyo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="walnutWood" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="50%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="cyanAcc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#bgBanyo)"/>
+
+  <!-- LED Mirror with halo cyan glow -->
+  <circle cx="400" cy="320" r="170" fill="none" stroke="rgba(56,189,248,0.35)" stroke-width="12" filter="url(#glow)"/>
+  <circle cx="400" cy="320" r="160" fill="#1e293b" stroke="url(#cyanAcc)" stroke-width="4"/>
+  <ellipse cx="360" cy="270" rx="90" ry="40" fill="rgba(255,255,255,0.06)" transform="rotate(-30 360 270)"/>
+
+  <!-- Floating CNC Machined Vanity Cabinet -->
+  <g>
+    <rect x="180" y="550" width="440" height="24" rx="4" fill="#f8fafc"/>
+    <ellipse cx="400" cy="560" rx="140" ry="18" fill="#e2e8f0"/>
+    <path d="M 400 520 L 400 480 Q 400 460 380 460 L 370 460" fill="none" stroke="url(#cyanAcc)" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Vanity Base with CNC Grooving -->
+    <rect x="190" y="574" width="420" height="220" rx="8" fill="url(#walnutWood)"/>
+    <line x1="190" y1="680" x2="610" y2="680" stroke="#0284c7" stroke-width="3"/>
+    
+    <!-- Brushed metal handles -->
+    <rect x="360" y="620" width="80" height="6" rx="3" fill="url(#cyanAcc)"/>
+    <rect x="360" y="730" width="80" height="6" rx="3" fill="url(#cyanAcc)"/>
+  </g>
+
+  <!-- Tag -->
+  <rect x="240" y="860" width="320" height="34" rx="17" fill="rgba(15,23,42,0.85)" stroke="url(#cyanAcc)" stroke-width="1.5"/>
+  <text x="400" y="882" fill="#38bdf8" font-family="'Montserrat', sans-serif" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="2">ALEN CNC • BANYO MODÜLLERİ</text>
+</svg>

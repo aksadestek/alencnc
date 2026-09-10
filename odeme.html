@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanal Ödeme & Güvenli Ödeme Noktası | Alen CNC</title>
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .checkout-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 36px;
+      margin: 40px 0 80px;
+    }
+    .payment-box {
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 32px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .payment-tabs {
+      display: flex;
+      border-bottom: 2px solid var(--border-color);
+      margin-bottom: 24px;
+      gap: 12px;
+    }
+    .payment-tab-btn {
+      padding: 12px 20px;
+      background: transparent;
+      border: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .payment-tab-btn.active {
+      color: var(--accent);
+    }
+    .payment-tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--accent);
+    }
+    .payment-tab-pane {
+      display: none;
+    }
+    .payment-tab-pane.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .card-preview-container {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-md);
+      max-width: 380px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-preview-container::after {
+      content: '';
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 120px;
+      height: 120px;
+      background: rgba(180, 140, 91, 0.2);
+      border-radius: 50%;
+    }
+    .installment-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 0.85rem;
+    }
+    .installment-table th, .installment-table td {
+      padding: 8px 12px;
+      border: 1px solid var(--border-color);
+      text-align: center;
+    }
+    .installment-table th {
+      background: #f8fafc;
+    }
+    .bank-account-card {
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .checkout-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <aside class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <a href="tel:+905533842459"><i class="fa fa-phone"></i> +90 553 384 24 59</a>
+        <a href="https://api.whatsapp.com/send?phone=905533842459" target="_blank" style="color:var(--whatsapp);"><i class="fa fa-whatsapp"></i> WhatsApp: 0553 384 24 59</a>
+      </div>
+      <div class="top-bar-right">
+        <a href="https://www.instagram.com/alen_cnc10/" target="_blank" class="badge-link" style="background:linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color:#fff; border:none; font-weight:700;"><i class="fa fa-instagram"></i> @alen_cnc10</a>
+        <span style="color:#94a3b8;"><i class="fa fa-lock" style="color:var(--success);"></i> 256-Bit SSL 3D Secure Korumalı Sanal Pos</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo_alen.png" alt="Alen CNC Logo" class="brand-logo-img">
+        <div class="brand-logo-text">
+          <span class="logo-main">ALEN <span>CNC</span></span>
+          <span class="logo-sub">CNC İŞLEME • TASARIM & ÜRETİM</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html" class="nav-link">Anasayfa</a></li>
+          <li class="nav-item"><a href="urunler.html" class="nav-link">Ürünler</a></li>
+          <li class="nav-item"><a href="kurumsal.html" class="nav-link">Kurumsal</a></li>
+          <li class="nav-item"><a href="iletisim.html" class="nav-link">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="sepet.html" class="btn btn-sm btn-outline"><i class="fa fa-shopping-bag"></i> Sepete Dön</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ÖDEME VE CHECKOUT İÇERİĞİ -->
+  <main class="container">
+    <div style="margin-top:40px;">
+      <h1 style="font-family:'Playfair Display',serif; font-size:2.2rem; color:var(--primary); margin-bottom:6px;">Güvenli Sanal Ödeme & Sipariş</h1>
+      <p style="color:var(--text-muted); font-size:0.95rem;">Kredi kartınızla peşin/taksitli veya kurumsal cari hesabınıza mahsuben sanal pos üzerinden ödeme yapabilirsiniz.</p>
+    </div>
+
+    <form id="checkout-form">
+      <div class="checkout-grid">
+        <!-- Sol Alan: Fatura & Ödeme Formu -->
+        <div>
+          <!-- 1. Adım: Teslimat ve Fatura Bilgileri -->
+          <div class="payment-box">
+            <h3 style="font-size:1.2rem; color:var(--primary); margin-bottom:18px; display:flex; align-items:center; gap:8px;">
+              <span style="width:26px; height:26px; border-radius:50%; background:var(--primary); color:#fff; display:inline-flex; align-items:center; justify-content:center; font-size:0.8rem;">1</span>
+              Teslimat & Fatura Bilgileri
+            </h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="bill-name">Ad Soyad / Şirket Ünvanı *</label>
+                <input type="text" id="bill-name" class="form-control" placeholder="Adınız ve Soyadınız" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="bill-phone">Telefon Numarası *</label>
+                <input type="tel" id="bill-phone" class="form-control" placeholder="05XX XXX XX XX" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="bill-email">E-Posta Adresi *</label>
+                <input type="email" id="bill-email" class="form-control" placeholder="fatura@sirketiniz.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="bill-city">İl / İlçe *</label>
+                <input type="text" id="bill-city" class="form-control" placeholder="İzmir / Bornova" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="bill-address">Açık Teslimat Adresi *</label>
+              <textarea id="bill-address" class="form-control" rows="2" placeholder="Cadde, sokak, bina ve daire no..." required></textarea>
+            </div>
+          </div>
+
+          <!-- 2. Adım: Ödeme Yöntemi -->
+          <div class="payment-box">
+            <h3 style="font-size:1.2rem; color:var(--primary); margin-bottom:18px; display:flex; align-items:center; gap:8px;">
+              <span style="width:26px; height:26px; border-radius:50%; background:var(--primary); color:#fff; display:inline-flex; align-items:center; justify-content:center; font-size:0.8rem;">2</span>
+              Ödeme Yöntemi Seçimi
+            </h3>
+
+            <!-- Sekmeler -->
+            <div class="payment-tabs">
+              <button type="button" class="payment-tab-btn active" data-tab="tab-cc">
+                <i class="fa fa-credit-card"></i> Kredi Kartı / Banka Kartı
+              </button>
+              <button type="button" class="payment-tab-btn" data-tab="tab-bayi">
+                <i class="fa fa-briefcase"></i> Bayi Sanal Pos / Cari
+              </button>
+              <button type="button" class="payment-tab-btn" data-tab="tab-havale">
+                <i class="fa fa-bank"></i> Havale / EFT
+              </button>
+            </div>
+
+            <!-- TAB 1: KREDİ KARTI -->
+            <div class="payment-tab-pane active" id="tab-cc">
+              <!-- Görsel Kart Önizlemesi -->
+              <div class="card-preview-container">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                  <span style="font-size:0.75rem; letter-spacing:2px; color:var(--accent);">ALEN CNC SANAL POS</span>
+                  <i class="fa fa-wifi" style="transform:rotate(90deg);"></i>
+                </div>
+                <div style="font-family:monospace; font-size:1.2rem; letter-spacing:3px; margin-bottom:16px;">
+                  •••• •••• •••• ••••
+                </div>
+                <div style="display:flex; justify-content:space-between; font-size:0.8rem;">
+                  <div>
+                    <span style="color:#94a3b8; font-size:0.65rem; display:block;">KART SAHİBİ</span>
+                    <span>AD SOYAD</span>
+                  </div>
+                  <div>
+                    <span style="color:#94a3b8; font-size:0.65rem; display:block;">SON KULLANMA</span>
+                    <span>AA/YY</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="card-holder">Kart Üzerindeki İsim *</label>
+                <input type="text" id="card-holder" class="form-control" placeholder="Ad Soyad">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="card-number">Kart Numarası *</label>
+                <input type="text" id="card-number" class="form-control" placeholder="XXXX XXXX XXXX XXXX" maxlength="19">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="card-exp">Son Kullanma Tarihi (AA/YY) *</label>
+                  <input type="text" id="card-exp" class="form-control" placeholder="AA/YY" maxlength="5">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="card-cvv">Güvenlik Kodu (CVV) *</label>
+                  <input type="password" id="card-cvv" class="form-control" placeholder="CVV" maxlength="3">
+                </div>
+              </div>
+
+              <!-- Taksit Tablosu -->
+              <div style="margin-top:14px;">
+                <label class="form-label">Taksit Seçenekleri</label>
+                <table class="installment-table">
+                  <thead>
+                    <tr>
+                      <th>Taksit Sayısı</th>
+                      <th>Aylık Tutar</th>
+                      <th>Toplam Tutar</th>
+                      <th>Seçim</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Tek Çekim</td>
+                      <td>Peşin Fiyatına</td>
+                      <td>Komisyonsuz</td>
+                      <td><input type="radio" name="installment" checked></td>
+                    </tr>
+                    <tr>
+                      <td>3 Taksit</td>
+                      <td>Vade Farksız</td>
+                      <td>Aynı Fiyat</td>
+                      <td><input type="radio" name="installment"></td>
+                    </tr>
+                    <tr>
+                      <td>6 Taksit</td>
+                      <td>Düşük Vade</td>
+                      <td>Peşin Fiyatına +%3</td>
+                      <td><input type="radio" name="installment"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- TAB 2: BAYİ SANAL POS / CARİ ÖDEME -->
+            <div class="payment-tab-pane" id="tab-bayi">
+              <div style="background:#f8fafc; padding:16px; border-radius:6px; margin-bottom:16px; font-size:0.85rem; color:#475569;">
+                <i class="fa fa-info-circle" style="color:var(--accent);"></i> Bayi carisine mahsuben ödeme yapmak için Bayi Kodunuzu giriniz.
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Bayi Kodu / Vergi No *</label>
+                  <input type="text" class="form-control" placeholder="Örn: BY-35108">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Yetkili Adı Soyadı *</label>
+                  <input type="text" class="form-control" placeholder="Yetkili Kişi">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Ödeme Açıklaması / Sipariş No</label>
+                <input type="text" class="form-control" placeholder="Örn: 2025/09 Hakediş Ödemesi">
+              </div>
+            </div>
+
+            <!-- TAB 3: HAVALE / EFT -->
+            <div class="payment-tab-pane" id="tab-havale">
+              <div style="font-size:0.88rem; color:#64748b; margin-bottom:16px;">
+                Siparişinizi tamamladıktan sonra lütfen aşağıdaki banka hesaplarımıza açıklama kısmına <strong>Ad Soyad ve Telefon Numaranızı</strong> yazarak havale/EFT yapınız:
+              </div>
+
+              <div class="bank-account-card">
+                <div>
+                  <strong style="color:var(--primary); font-size:0.95rem;"><i class="fa fa-bank" style="color:var(--accent);"></i> Garanti BBVA</strong>
+                  <div style="font-size:0.8rem; color:#64748b;">Alen CNC Mobilya & Kapı Sistemleri San. Tic. Ltd. Şti.</div>
+                  <div style="font-family:monospace; font-weight:700; color:var(--primary); margin-top:4px;">TR42 0006 2000 0001 2345 6789 01</div>
+                </div>
+                <button type="button" class="btn btn-sm btn-outline" onclick="navigator.clipboard.writeText('TR420006200000012345678901'); alert('IBAN panoya kopyalandı!');">Kopyala</button>
+              </div>
+
+              <div class="bank-account-card">
+                <div>
+                  <strong style="color:var(--primary); font-size:0.95rem;"><i class="fa fa-bank" style="color:var(--accent);"></i> Türkiye İş Bankası</strong>
+                  <div style="font-size:0.8rem; color:#64748b;">Alen CNC Mobilya & Kapı Sistemleri San. Tic. Ltd. Şti.</div>
+                  <div style="font-family:monospace; font-weight:700; color:var(--primary); margin-top:4px;">TR15 0006 4000 0019 8765 4321 02</div>
+                </div>
+                <button type="button" class="btn btn-sm btn-outline" onclick="navigator.clipboard.writeText('TR150006400000198765432102'); alert('IBAN panoya kopyalandı!');">Kopyala</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sağ Alan: Sipariş Özeti Kutusu -->
+        <aside>
+          <div class="payment-box" style="position:sticky; top:100px;">
+            <h3 style="font-size:1.2rem; color:var(--primary); margin-bottom:18px; padding-bottom:10px; border-bottom:1px solid var(--border-color);">
+              Sipariş Edilen Ürünler
+            </h3>
+
+            <div id="checkout-items-list" style="max-height:260px; overflow-y:auto; margin-bottom:16px;">
+              <!-- checkout.js tarafından doldurulacak -->
+            </div>
+
+            <div class="cart-summary-line">
+              <span>Ara Toplam</span>
+              <strong id="checkout-subtotal">₺0</strong>
+            </div>
+            <div class="cart-summary-line">
+              <span>Kargo Ücreti</span>
+              <span id="checkout-shipping" style="color:var(--success); font-weight:600;">Ücretsiz</span>
+            </div>
+            <div class="cart-summary-line">
+              <span>KDV (%20)</span>
+              <span id="checkout-tax">₺0</span>
+            </div>
+
+            <div class="cart-summary-total" style="border-top:1px solid var(--border-color); padding-top:14px; margin-top:14px;">
+              <span>Ödenecek Tutar</span>
+              <span id="checkout-total" style="color:var(--accent); font-size:1.35rem;">₺0</span>
+            </div>
+
+            <div style="margin:16px 0; font-size:0.8rem; color:#64748b;">
+              <label style="display:flex; align-items:flex-start; gap:8px; cursor:pointer;">
+                <input type="checkbox" required checked style="margin-top:3px;">
+                <span><a href="#" style="color:var(--accent); text-decoration:underline;">Mesafeli Satış Sözleşmesi</a> ve Ön Bilgilendirme Formu'nu okudum, onaylıyorum.</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-accent btn-block" id="btn-complete-order" style="padding:15px; font-size:1rem;">
+              <i class="fa fa-lock"></i> Siparişi ve Ödemeyi Tamamla
+            </button>
+
+            <div style="margin-top:14px; text-align:center; font-size:0.75rem; color:#94a3b8;">
+              <i class="fa fa-shield" style="color:var(--success);"></i> BKM Express, Troy, Visa, Mastercard ve 3D Secure güvencesi
+            </div>
+          </div>
+        </aside>
+      </div>
+    </form>
+  </main>
+
+  <!-- SİPARİŞ BAŞARILI MODALI -->
+  <div class="modal-overlay" id="order-success-modal">
+    <div class="modal-card" style="grid-template-columns:1fr; max-width:550px; text-align:center; padding:40px;">
+      <div style="width:70px; height:70px; border-radius:50%; background:rgba(16,185,129,0.1); color:var(--success); display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 20px;">
+        <i class="fa fa-check"></i>
+      </div>
+      <h2 style="font-family:'Playfair Display',serif; color:var(--primary); margin-bottom:8px;">Ödemeniz Başarıyla Alındı!</h2>
+      <p style="color:#64748b; font-size:0.95rem; margin-bottom:20px;">
+        Sayın <strong id="order-customer-display">Müşterimiz</strong>, siparişiniz onaylanmış olup üretim & lojistik departmanımıza iletilmiştir.
+      </p>
+
+      <div style="background:#f8fafc; padding:16px; border-radius:8px; border:1px solid var(--border-color); margin-bottom:24px;">
+        <div style="font-size:0.85rem; color:#94a3b8;">Sipariş / İşlem Takip Numarası:</div>
+        <strong id="order-number-display" style="font-size:1.3rem; color:var(--accent); letter-spacing:1.5px;">ALEN-849201</strong>
+      </div>
+
+      <div style="display:flex; gap:12px; justify-content:center;">
+        <a href="index.html" class="btn btn-primary"><i class="fa fa-home"></i> Ana Sayfaya Dön</a>
+        <button onclick="window.print()" class="btn btn-outline"><i class="fa fa-print"></i> Faturayı Yazdır</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 <strong>Alen CNC Mobilya & Kapı Sistemleri</strong>. Tüm Hakları Saklıdır.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+  <script>
+    // URL parametresinden bayi tabını açma (odeme.html?tab=bayi)
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('tab') === 'bayi') {
+        const bayiBtn = document.querySelector('[data-tab="tab-bayi"]');
+        if (bayiBtn) bayiBtn.click();
+      }
+    });
+  </script>
+</body>
+</html>
